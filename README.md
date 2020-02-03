@@ -51,10 +51,12 @@
 ### Association
 - belongs_to : user
 
+
 ## itemsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
+|seller_id|integer|null: false, foreign_key: true|
+|buyer_id|integer|null: false, foreign_key: true|
 |name|string|null: false|
 |price|integer|null: false|
 |item_explanation|text|null: false|
@@ -102,6 +104,7 @@
 - belong_to :user
 - belong_to :item
 
+
 ## transactionテーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -115,6 +118,7 @@
 - has_many :transaction_messages
 - has_many :transaction_status
 - has_many :user_transactions
+
 
 ## transaction_message
 |Column|Type|Options|
