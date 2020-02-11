@@ -1,10 +1,74 @@
-.template1
-  Posts#index
+//header
+= render "shared/header"
 
-.template2
-  ログイン
-  ログアウト
-  新規登録
+//カメラアイコン
+= render "shared/camera"
 
-.template3
+//header直下の表紙
 
+.upcover
+  =image_tag "freemarket_cover.png",size: "1440x400" ,alt:"fmarket_cover"
+  .upcover-wrapper
+    .upcover-wrapper--content1
+      スマホでかんたん
+      .upcover-wrapper--content2
+        フリマアプリ
+    .upcover-wrapper--content3
+      エフマーケットはスマホからすぐに出品できる
+    .upcover-wrapper--content4
+      購入時も安心な独自システムのアプリです
+    %img.appstore{alt: "",src: "https://web-jp-assets.mercdn.net/_next/static/images/app-store-a5c17948c6fd6d5b60b13d421cd60b35.svg"}/
+    %img.googleplay{alt: "",src: "https://web-jp-assets.mercdn.net/_next/static/images/google-play-495575abb895b405aa6336b2a4304958.svg"}/
+
+.contents1
+  .contents1-wrapper
+    全ての商品一覧
+  .contents1-column
+    .contents1-column--ladis
+      レディース
+    .contents1-column--mens
+      メンズ
+    .contents1-column--homeappliances
+      家電・スマホ・カメラ
+    .contents1-column--toys
+      おもちゃ・ホビー・グッズ
+
+.contents2
+  .contents2-ladis-wrapper
+    .contents2-ladis-wrapper--text1
+      レディース新着アイテム
+      .contents2-ladis-wrapper--text2
+        もっと見る >
+    .contents2-ladis-wrapper--product
+      %img.pict{alt: "",src: "https://static.mercdn.net/thumb/photos/m94317389140_1.jpg?1581146253"}/
+      %span.price-label{"": "Price"} ¥2,700
+      .contents2-ladis-wrapper--product-text
+        ギャバワンピース
+
+.contents1
+  .contents1-wrapper
+    人気の商品一覧
+  .contents1-column
+    .contents1-column--ladis
+      レディース
+    .contents1-column--mens
+      メンズ
+    .contents1-column--homeappliances
+      家電・スマホ・カメラ
+    .contents1-column--toys
+      おもちゃ・ホビー・グッズ
+
+.contents2
+  .contents2-ladis-wrapper
+    .contents2-ladis-wrapper--text1
+      レディース新着アイテム
+      .contents2-ladis-wrapper--text2
+        もっと見る >
+    .contents2-ladis-wrapper--product
+      %img.pict{alt: "",src: "https://static.mercdn.net/thumb/photos/m94317389140_1.jpg?1581146253"}/
+      %span.price-label{"": "Price"} ¥2,700
+      .contents2-ladis-wrapper--product-text
+        ギャバワンピース
+
+//footer(一番下の表示)
+= render "shared/footer"

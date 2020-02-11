@@ -1,0 +1,65 @@
+.footer-cover{
+  width: 100%;
+  height: 300px;
+  background-color: rgb(198, 198, 223);
+  .footer-cover-contents{
+    width: 750px;
+    height: 300px;
+    margin: 0 auto;
+    background-color: rgb(57, 141, 141);position: relative;
+    &--text1{
+      padding-left: 20px;
+      padding-top: 20px;
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 15px;
+      position: absolute;
+      bottom: 220px;
+    }
+    &--text2{
+      font-size: 32px;
+      margin-bottom: 20px;
+      font-weight: 500;
+      position: absolute;
+    }
+    .appstore{
+      width: 180px;
+      height: 60px;
+      margin-left: 20px;
+      margin-right: 8px;
+      position: absolute;
+      right: 550px;
+      top: 200px;
+    }
+    .googleplay{
+    width: 180px;
+    height: 60px;
+    right: 350px;
+    top: 200px;
+    position: absolute;
+    }
+  }
+}
+
+
+
+.footer-contents{
+  width: 100%;
+  height: 300px;
+  background-color: rgb(34, 34, 34);
+  font-size: 24px;
+  &--main{
+    width: 1020px;
+    height: 300px;
+    margin: 0 auto;
+    background-color: gray;
+    color: white;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-weight: 600;
+  }
+  &--mainlist4{
+    a:link { color: white; }
+    a:visited { color: white; } 
+  }
+}

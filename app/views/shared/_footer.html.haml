@@ -1,0 +1,24 @@
+.footer-cover
+  .footer-cover-contents
+    =image_tag "footer_cover.png",size: "750x300" ,alt:"footer_cover"
+    .footer-cover-contents--text1
+      スマホでかんたんフリマアプリ
+      .footer-cover-contents--text2
+        今すぐ無料ダウンロード！
+    %img.appstore{alt: "",src: "https://web-jp-assets.mercdn.net/_next/static/images/app-store-a5c17948c6fd6d5b60b13d421cd60b35.svg"}/
+    %img.googleplay{alt: "",src: "https://web-jp-assets.mercdn.net/_next/static/images/google-play-495575abb895b405aa6336b2a4304958.svg"}/
+.footer-contents
+  .footer-contents--main
+    .footer-contents--mainlist1
+      エフマーケットについて
+    .footer-contents--mainlist2
+      公式ブログ
+    .footer-contents--mainlist3
+      相互リンク
+    .footer-contents--mainlist4
+      = link_to "https://twitter.com/", class: "contents__btn" do
+        = icon('fab', 'twitter')
+      .footer-contents--mainlist5
+        = link_to "https://www.facebook.com/", class: "contents__btn" do
+          = icon('fab', 'facebook-square')
+    =image_tag "fmarket_logo_white.png",size: '125x36',alt:"fmarket_white"
