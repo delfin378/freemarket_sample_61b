@@ -21,23 +21,13 @@
       margin-bottom: 20px;
       font-weight: 500;
       position: absolute;
+      img {
+        border-radius: 8%;
+        margin-top: 20px;
+      }
     }
-    .appstore{
-      width: 180px;
-      height: 60px;
-      margin-left: 20px;
-      margin-right: 8px;
-      position: absolute;
-      right: 550px;
-      top: 200px;
-    }
-    .googleplay{
-    width: 180px;
-    height: 60px;
-    right: 350px;
-    top: 200px;
-    position: absolute;
-    }
+    
+    
   }
 }
 
