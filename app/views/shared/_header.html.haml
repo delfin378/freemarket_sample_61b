@@ -2,7 +2,7 @@
 .header
   .header-wrapper
     .header-wrapper--top
-      =image_tag "fmarket_logo.png",size: '125x36',alt:"fmarket"
+      =image_tag "#{asset_path "fmarket_logo.png"}",size: '125x36',alt:"fmarket"
       .search_bar
         %input.textform{name: "keyword", placeholder: "何かお探しですか？", type: "text", value: ""}
         %i.fas.fa-search.search_icon
