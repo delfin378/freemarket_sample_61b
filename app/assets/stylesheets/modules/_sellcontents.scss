@@ -213,12 +213,13 @@
     width: 620px;
     margin: 0 auto;
     .production-price-header{
+    padding-top: 55px;
     color: gray;
     }
     &--black{
       font-weight: 600;
       line-height: 1.4em;
-      padding-top: 55px;
+      padding-top: 35px;
       padding-bottom: 55px;
       color:black;
       display: inline-block;
