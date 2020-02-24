@@ -8,13 +8,16 @@
   background-color: red;
   color: white;
   display: block;
+  z-index: 1;
   &--contents{
     font-size: 22px;
     margin-top: 25px;
     margin-left: 58px;
+    
   }
   .fa-camera{
     font-size: 60px;
     margin-left: 50px;
+    text-decoration: none;
   }
 }
