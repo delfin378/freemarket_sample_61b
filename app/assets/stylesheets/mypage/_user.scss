@@ -3,12 +3,11 @@
   width: 700px;
 
 }
-  .user {
+  .user-information {
     height: 200px;
     background:#FFEEFF;
 
-  }
-  .user__face {
+  &__face {
     text-align: center;
     
     i {
@@ -20,59 +19,57 @@
       margin-top: 50px;
       padding-top: 5px;
       background-color: gray;
-      
-      
     }
   }
-
-  .user__name h2 {
-    margin: 8px 0 0;
-    font-size: 14px;
-    font-weight: 600;
-    text-align: center;
-    line-height: 1.4;
-  }
-  .number {
-    margin: 8px 0 0;
-    font-size: 0;
-    text-align: center;
-  }
-  .evaluation {
-    display: inline-block;
-    font-size: 14px;
-    span {
-      font-weight: 600;
-      margin: 0 0 0 8px;
+    &__name h2 {
+      margin: 8px 0 0;
       font-size: 14px;
-    }
-  }
-  .exhibitions {
-    display: inline-block;
-    font-size: 14px;
-    margin: 0 0 0 16px;
-    span {
       font-weight: 600;
-      margin: 0 0 0 8px;
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    .number {
+      margin: 8px 0 0;
+      font-size: 0;
+      text-align: center;
+
+    &__evaluation {
+      display: inline-block;
       font-size: 14px;
+      span {
+        font-weight: 600;
+        margin: 0 0 0 8px;
+        font-size: 14px;
+      }
+    }
+  
+    &__exhibitions {
+      display: inline-block;
+      font-size: 14px;
+      margin: 0 0 0 16px;
+      span {
+        font-weight: 600;
+        margin: 0 0 0 8px;
+        font-size: 14px;
+      }
+     }
     }
   }
+  
+ 
 
-
-
-
-
-.user-action {
+.user-action-tabs {
   margin: 0;
   background: #fff;
 }
 
-  .user-action-tabs {
+  .user-action-tab {
   border: 0;
   background: #eee;
   font-size: 0;
-}
 
-  .user-action-tab__news_list {
+  &__news_list {
     width: 50%;
     background: #fff;
     line-height: 72px;
@@ -85,7 +82,7 @@
     }
   }
   
-   .user-action-tab__to_to_list {
+   &__to_to_list {
     width: 50%;
     line-height: 72px;
     background: #eee;
@@ -96,17 +93,17 @@
         font-weight: 600;
     }
   }
+}
 
 
   .user-action-tab__contents {
     margin: 0;
     padding: 0;
-  }
  
-  .user-action-tab__contents__box {
+  &__box {
     display: block;
   }
-  .user-action-tab__contents__box__list {
+  &__box__list {
     position: relative;
     border-bottom: 1px solid #eee;
     font-size: 14px;
@@ -114,9 +111,8 @@
       display: block;
       padding: 16px;
       color: #333;
-    }
       
-      .fmarket_logo {
+      &__fmarket_logo {
         position: relative;
         overflow: hidden;
         float: left;
@@ -124,24 +120,28 @@
         height: 35px;
         background: #f5f5f5;
       }
+    }
+  }
         .content {
           margin: 0 40px 0 68px;
-        }
-          .text {
+          &__text {
             line-height: 1.5;
           }
-            .time {
+          
+            &__time {
               display: inline-block;
               color: #888;
             }
-              
-              .icon
+              &__icon
               i {
                 position: absolute;
                 top: 50%;
                 right: 16px;
               }
             }
+          }
+        
+      
            
           
 
@@ -184,14 +184,14 @@
   border: 0;
   background: #eee;
   font-size: 0;
-  .action-tab1 {
+  &__1 {
     background: #fff;
     width: 50%;
     display: inline-block;
     text-align: center;
     vertical-align: top;
+    border-top: 2px solid #ea352d;
     a {
-      border-top: 2px solid #ea352d;
       position: relative;
       display: block;
       color: #333;
@@ -200,7 +200,7 @@
       font-weight: 600;
     }
   }
-  .action-tab2 {
+  &__2 {
     width: 50%;
     display: inline-block;
     text-align: center;
@@ -216,19 +216,16 @@
   }
 }
 
-
 .lists-box {
   display: block;
-}
 
-
-.list {
+  &__list {
   padding: 30px 0 60px;
   text-align: center;
   font-size: 16px;
   font-weight: 600;
-  .fmarket_logo {
-    color: #ccc;
-    
+  }
+    &__fmarket-logo {
+      color: #ccc;
+    }
   } 
-}

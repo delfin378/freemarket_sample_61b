@@ -1,19 +1,19 @@
 .user-contents-box
-  %section.user
-    .user__face
+  %section.user-information
+    .user-information__face
       %i.fas.fa-user-circle
-    .user__name
+    .user-information__name
       %h2 ユーザー
     .number
-      .evaluation
+      .number__evaluation
         評価
         %span 5
-      .exhibitions
+      .number__exhibitions
         出品数
         %span 5
 
-  %section.user-action
-    %ul.user-action-tabs
+  %section.user-action-tabs
+    %ul.user-action-tab
       %li.user-action-tab__news_list
         %h3 お知らせ
       %li.user-action-tab__to_to_list
@@ -23,63 +23,63 @@
       %ul.user-action-tab__contents__box
         %li.user-action-tab__contents__box__list
           %a.content-box
-            .fmarket_logo
+            .content-box__fmarket_logo
               =image_tag "fmarket_logo.png",size: '125x36',alt:"fmarket"
             .content
-              .text
+              .content__text
                 お知らせ1
-              .time
+              .content__time
                 %i= icon('far','clock')
                 %span time
-            .icon
+            .content__icon
               = icon('fas', 'chevron-right')
         %li.user-action-tab__contents__box__list
           %a.content-box
-            .fmarket_logo
+            .content-box__fmarket_logo
               =image_tag "fmarket_logo.png",size: '125x36',alt:"fmarket"
             .content
-              .text
+              .content__text
                 お知らせ2
-              .time
+              .content__time
                 = icon('far','clock')
                 %span time
-            .icon
+            .content__icon
               = icon('fas', 'chevron-right')
         %li.user-action-tab__contents__box__list
           %a.content-box
-            .fmarket_logo
+            .content-box__fmarket_logo
               =image_tag "fmarket_logo.png",size: '125x36',alt:"fmarket"
             .content
-              .text
+              .content__text
                 お知らせ3
-              .time
+              .content__time
                 = icon('far','clock')
                 %span time
-            .icon
+            .content__icon
               = icon('fas', 'chevron-right')
         %li.user-action-tab__contents__box__list
           %a.content-box
-            .fmarket_logo
+            .content-box__fmarket_logo
               =image_tag "fmarket_logo.png",size: '125x36',alt:"fmarket"
             .content
-              .text
+              .content__text
                 お知らせ4
-              .time
+              .content__time
                 = icon('far','clock')
                 %span time
-            .icon
+            .content__icon
               = icon('fas', 'chevron-right')
         %li.user-action-tab__contents__box__list
           %a.content-box
-            .fmarket_logo
+            .content-box__fmarket_logo
               =image_tag "fmarket_logo.png",size: '125x36',alt:"fmarket"
             .content
-              .text
+              .content__text
                 お知らせ5
-              .time
+              .content__time
                 = icon('far','clock')
                 %span time
-            .icon
+            .content__icon
               = icon('fas', 'chevron-right')
         %li.contents-list
           %a 一覧を見る
@@ -87,18 +87,18 @@
   %section.user-purchased-list
     %h2 購入した商品
     %ul.action-tab
-      %li.action-tab1
+      %li.action-tab__1
         %h3
           %a 取引中
-      %li.action-tab2
+      %li.action-tab__2
         %h3
           %a 過去の取引
     .trading-products-lists
       %ul.lists-box
-        %li.list
-          .fmarket_logo
+        %li.lists-box__list
+          .lists-box__fmarket-logo
             =image_tag "fmarket_logo_white.png",alt:"fmarket"
-            .text
+            .lists-box__text
             取引中の商品がありません
         
 
