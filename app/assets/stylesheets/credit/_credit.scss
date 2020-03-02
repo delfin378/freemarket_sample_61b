@@ -38,23 +38,23 @@
   padding: 24px 0;
   border-bottom: 1px solid #eee;
     &__content {
-    background: #ea352d;
-    border: 1px solid #ea352d;
-    color: #fff;
-    margin-bottom: 8px !important;
-    max-width: 320px;
-    margin: 0 auto;
+      background: #ea352d;
+      border: 1px solid #ea352d;
+      color: #fff;
+      margin-bottom: 8px !important;
+      max-width: 320px;
+      margin: 0 auto;
   }
 }
 
 
 .credit-card__pay {
   &__method {
-  display: block;
-  margin: 40px 0 0;
-  text-align: right;
-  color: #0099e8;
-  text-decoration: none;
-  font-size: 14px;
+    display: block;
+    margin: 40px 0 0;
+    text-align: right;
+    color: #0099e8;
+    text-decoration: none;
+    font-size: 14px;
   }
 }
