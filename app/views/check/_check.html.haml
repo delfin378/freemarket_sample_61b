@@ -1,0 +1,66 @@
+.user-check
+  %section.check-container
+    %h2 本人情報の登録
+    %form.check
+      .check-box
+        .personal
+          .personal-data
+            %p 
+              %text お客さまの本人情報をご登録ください。
+          .change
+            %p 
+              %text 登録されたお名前・生年月日を変更する場合、本人確認書類の提出が必要になります。
+        .upload
+          %p 
+            %text 本人確認書類のアップロードについて
+            = icon('fas', 'chevron-right')
+      
+        .personal-form
+          %lavel お名前
+          %p user
+        .personal-form
+          %lavel お名前カナ
+          %p ユーザー 
+
+        .personal-form
+          %lavel 生年月日
+          %p 0000/0/00
+
+        .personal-form
+          %lavel 郵便番号
+          %span 任意
+          .form
+            %input.registration-default{name:"nickname",placeholder:"",type:"text",value: ""}/
+
+        .personal-form
+          %lavel 都道府県
+          %span 任意
+          .form
+            %input.serect-default{name:"nickname",placeholder:"",type:"text",value:  ""}/
+            = icon('fas', 'chevron-down')
+
+        .personal-form
+          %lavel 市区町村
+          %span 任意
+          .form
+            %input.registration-default{name:"nickname",placeholder:"",type:"text",value: ""}/
+
+        .personal-form
+          %lavel 番地
+          %span 任意
+          .form
+            %input.registration-default{name:"nickname",placeholder:"",type:"text",value: ""}/
+
+        .personal-form
+          %lavel 建物名
+          %span 任意
+          .form
+            %input.registration-default{name:"nickname",placeholder:"",type:"text",value: ""}/
+     
+        %button.default{:type => "submit"} 登録する
+
+        
+        
+
+
+
