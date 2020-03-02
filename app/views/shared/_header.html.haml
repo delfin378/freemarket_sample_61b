@@ -1,0 +1,28 @@
+//ヘッダー
+.header
+  .header-wrapper
+    .header-wrapper--top
+      =image_tag "#{asset_path "fmarket_logo.png"}",size: '125x36',alt:"fmarket"
+      .search_bar
+        %input.textform{name: "keyword", placeholder: "何かお探しですか？", type: "text", value: ""}
+        %i.fas.fa-search.search_icon
+  .header-bottom
+    .header-bottom--list
+      .search-category
+        %i.fas.fa-list
+        カテゴリーから探す
+      .search-brand
+        %i.fas.fa-tag
+        ブランドから探す
+      .good-list
+        %i.far.fa-heart
+        いいね！一覧
+      .known-list
+        %i.far.fa-bell
+        お知らせ
+      .play-list
+        %i.fas.fa-check
+        やることリスト
+      .mypage-list
+        %i.fas.fa-user-circle
+        マイページ
