@@ -3,9 +3,7 @@
   width: 280px;
   margin: 0 40px 0 0;
   
-}
-
-  .left-box__lists {
+  &__lists {
   i {
     position: absolute;
     top: 40%;
@@ -35,11 +33,12 @@
     color: #333;
     font-weight: 600;
     background: #eee;
-  i {
-    position: absolute;
-    top: 40%;
-    right: 16px;
-    color: #333;
+    i {
+      position: absolute;
+      top: 40%;
+      right: 16px;
+      color: #333;
+    }
   }
  } 
 }
@@ -48,9 +47,7 @@
   float: left;
   width: 280px;
   margin: 0 40px 0 0;
-}
-
-  .left-box2__lists {
+  &__lists {
   font-weight: 600;
   position: relative;
   display: block;
@@ -66,11 +63,12 @@
     background: #fff;
     font-size: 14px;
     color: #333;
-  i {
-    position: absolute;
-    top: 40%;
-    right: 16px;
-    color: #ccc;
+    i {
+      position: absolute;
+      top: 40%;
+      right: 16px;
+      color: #ccc;
+    }
   }
  }
 }
@@ -78,8 +76,7 @@
   float: left;
   width: 280px;
   margin: 0 40px 0 0;
-}
-  .left-box3__lists {
+  &__lists {
     font-weight: 600;
     position: relative;
     display: block;
@@ -100,8 +97,8 @@
       right: 16px;
       color: #ccc;
     }
+   }
   }
-  
 }
 
 
