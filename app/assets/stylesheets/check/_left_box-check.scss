@@ -20,10 +20,10 @@
     font-size: 14px;
     color: #333;
     i {
-    position: absolute;
-    top: 40%;
-    right: 16px;
-    color: #ccc;
+      position: absolute;
+      top: 40%;
+      right: 16px;
+      color: #ccc;
    }
   }
 } 
@@ -34,12 +34,12 @@
   width: 280px;
   margin: 0 40px 0 0;
   &__lists {
-  font-weight: 600;
-  position: relative;
-  display: block;
-  color: #333;
-  margin: 40px 0 0;
-  font-size: 16px;
+    font-weight: 600;
+    position: relative;
+    display: block;
+    color: #333;
+    margin: 40px 0 0;
+    font-size: 16px;
   &__list {
     background: #fff;
     border-top: 1px solid #eee;
