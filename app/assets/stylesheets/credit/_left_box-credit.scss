@@ -26,8 +26,7 @@
     color: #ccc;
    }
   }
-  
- } 
+} 
 
 
 .left-box2 {
@@ -60,6 +59,7 @@
   }
  }
 }
+
 .left-box3 {
   float: left;
   width: 280px;
@@ -80,6 +80,12 @@
     padding: 16px;
     font-size: 14px;
     color: #333;
+    i {
+      position: absolute;
+      top: 40%;
+      right: 16px;
+      color: #ccc;
+    }
   &__main {
       border-top: 1px solid #eee;
       position: relative;
@@ -94,17 +100,10 @@
       top: 40%;
       right: 16px;
       color: #333;
-    i {
-      position: absolute;
-      top: 40%;
-      right: 16px;
-      color: #ccc;
     }
+   }
   }
- }
 }
-}
-
 
 
 
