@@ -2,11 +2,8 @@
   float: left;
   width: 280px;
   margin: 0 40px 0 0;
-  
-}
-
-  .left-box__lists {
-  i {
+  &__lists {
+    i {
     position: absolute;
     top: 40%;
     right: 16px;
@@ -20,28 +17,25 @@
     font-size: 14px;
     color: #333;
     i {
-    position: absolute;
-    top: 40%;
-    right: 16px;
-    color: #ccc;
+      position: absolute;
+      top: 40%;
+      right: 16px;
+      color: #ccc;
+    }
    }
   }
 } 
-
-
 .left-box2 {
   float: left;
   width: 280px;
   margin: 0 40px 0 0;
-}
-
-  .left-box2__lists {
-  font-weight: 600;
-  position: relative;
-  display: block;
-  color: #333;
-  margin: 40px 0 0;
-  font-size: 16px;
+  &__lists {
+    font-weight: 600;
+    position: relative;
+    display: block;
+    color: #333;
+    margin: 40px 0 0;
+    font-size: 16px;
   &__list {
     background: #fff;
     border-top: 1px solid #eee;
@@ -51,11 +45,12 @@
     background: #fff;
     font-size: 14px;
     color: #333;
-  i {
-    position: absolute;
-    top: 40%;
-    right: 16px;
-    color: #ccc;
+    i {
+      position: absolute;
+      top: 40%;
+      right: 16px;
+      color: #ccc;
+    }
   }
  }
 }
@@ -63,8 +58,7 @@
   float: left;
   width: 280px;
   margin: 0 40px 0 0;
-}
-  .left-box3__lists {
+  &__lists {
     font-weight: 600;
     position: relative;
     display: block;
@@ -88,17 +82,17 @@
     color: #333;
     font-weight: 600;
     background: #eee;
-  i {
-    position: absolute;
-    top: 40%;
-    right: 16px;
-    color: #333;
-  
-    i {
+      i {
       position: absolute;
       top: 40%;
       right: 16px;
-      color: #ccc;
+      color: #333;
+      i {
+        position: absolute;
+        top: 40%;
+        right: 16px;
+        color: #ccc;
+      }
     }
    }
   }
