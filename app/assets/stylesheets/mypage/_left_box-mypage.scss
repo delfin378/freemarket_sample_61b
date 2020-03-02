@@ -4,39 +4,39 @@
   margin: 0 40px 0 0;
   &__lists {
   i {
-  position: absolute;
-  top: 40%;
-  right: 16px;
-  }
-  &__list {
-  background: #fff;
-  border-top: 1px solid #eee;
-  position: relative;
-  display: block;
-  padding: 16px;
-  font-size: 14px;
-  color: #333;
-  i {
-  position: absolute;
-  top: 40%;
-  right: 16px;
-  color: #ccc;
-  }
-}
-  &__main {
-  border-top: 1px solid #eee;
-  position: relative;
-  display: block;
-  padding: 16px;
-  font-size: 14px;
-  color: #333;
-  font-weight: 600;
-  background: #eee;
-    i {
     position: absolute;
     top: 40%;
     right: 16px;
+  }
+  &__list {
+    background: #fff;
+    border-top: 1px solid #eee;
+    position: relative;
+    display: block;
+    padding: 16px;
+    font-size: 14px;
     color: #333;
+  i {
+    position: absolute;
+    top: 40%;
+    right: 16px;
+    color: #ccc;
+  }
+}
+  &__main {
+    border-top: 1px solid #eee;
+    position: relative;
+    display: block;
+    padding: 16px;
+    font-size: 14px;
+    color: #333;
+    font-weight: 600;
+    background: #eee;
+    i {
+      position: absolute;
+      top: 40%;
+      right: 16px;
+      color: #333;
     }
   }
  } 
@@ -47,26 +47,26 @@
   width: 280px;
   margin: 0 40px 0 0;
   &__lists {
-  font-weight: 600;
-  position: relative;
-  display: block;
-  color: #333;
-  margin: 40px 0 0;
-  font-size: 16px;
+    font-weight: 600;
+    position: relative;
+    display: block;
+    color: #333;
+    margin: 40px 0 0;
+    font-size: 16px;
   &__list {
-  background: #fff;
-  border-top: 1px solid #eee;
-  position: relative;
-  display: block;
-  padding: 16px;
-  background: #fff;
-  font-size: 14px;
-  color: #333;
+    background: #fff;
+    border-top: 1px solid #eee;
+    position: relative;
+    display: block;
+    padding: 16px;
+    background: #fff;
+    font-size: 14px;
+    color: #333;
     i {
-    position: absolute;
-    top: 40%;
-    right: 16px;
-    color: #ccc;
+      position: absolute;
+      top: 40%;
+      right: 16px;
+      color: #ccc;
     }
   }
  }
@@ -76,25 +76,25 @@
   width: 280px;
   margin: 0 40px 0 0;
   &__lists {
-  font-weight: 600;
-  position: relative;
-  display: block;
-  font-size: 16px;
-  margin: 40px 0 0;
-  color: #333;
+    font-weight: 600;
+    position: relative;
+    display: block;
+    font-size: 16px;
+    margin: 40px 0 0;
+    color: #333;
   &__list {
-  background: #fff;
-  border-top: 1px solid #eee;
-  position: relative;
-  display: block;
-  padding: 16px;
-  font-size: 14px;
-  color: #333;
+    background: #fff;
+    border-top: 1px solid #eee;
+    position: relative;
+    display: block;
+    padding: 16px;
+    font-size: 14px;
+    color: #333;
     i {
-    position: absolute;
-    top: 40%;
-    right: 16px;
-    color: #ccc;
+      position: absolute;
+      top: 40%;
+      right: 16px;
+      color: #ccc;
     }
    }
   }
