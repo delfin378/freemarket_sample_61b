@@ -29,6 +29,9 @@
 @import "mypage/_left_box-mypage.scss";
 @import "profile/_left_box-profile.scss";
 @import "check/_left_box-check.scss";
-
-
-
+//商品購入確認ページ
+@import "confirm/_confirm-screen";
+@import "confirm/_header-confirm";
+@import "confirm/_main-confirm";
+@import "confirm/_footer-confirm";
+@import "confirm/_confirm-box";

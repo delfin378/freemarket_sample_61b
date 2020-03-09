@@ -1,0 +1,14 @@
+.confirm-header {
+  height: 128px;
+  text-align: center;
+}
+.confirm-header-box {
+  &__icon {
+    img {
+      margin: 40px 0 0;
+      width: 185px;
+      height: 49px;
+      line-height: 49px;
+     }
+  }
+}
