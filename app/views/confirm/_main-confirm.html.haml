@@ -5,7 +5,7 @@
     .confirm-product-box__contents
       .confirm-product-box__content
         %h3
-          = image_tag "#{asset_path "dummy_product.png"}" ,size: "188x252" ,alt:"dummy_product"
+          %img.is-higher-height.lazyloaded{:alt => "", "data-src" => "https://static.mercdn.net/thumb/photos/m81209199295_1.jpg?1579894358", :src => "https://static.mercdn.net/thumb/photos/m81209199295_1.jpg?1579894358"}/
       .confirm-product-box-detail
         .confirm-product-box-detail__name
           %h2 [新品]ブランド  服  サイズ
@@ -40,7 +40,7 @@
               %p 都道府県
               %p 名前
         %section.product-purchase
-          %button.purchase{type:"submit"} 購入する
+          %button.default{:type => "submit"} 購入する
 
 
 
