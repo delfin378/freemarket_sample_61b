@@ -1,0 +1,88 @@
+= render "shared/header"
+
+.space
+.productdetail
+  .product-form
+    .product-former
+      .product-name
+        スマホ 広角レンズ セルカレンズ NeinGrenze
+      .product-contents
+        =image_tag "#{asset_path "camera.png"}",size: "330x360" ,alt:"camera_product"
+        .product-contents--collection
+      .product-infomation
+        .info-contents
+          .info-name
+            出品者
+          .info-text
+            テスト
+        .info-contents
+          .info-name
+            カテゴリー
+          .info-text
+            テスト
+        .info-contents
+          .info-name
+            ブランド
+          .info-text
+            テスト
+        .info-contents
+          .info-name
+            商品の状態
+          .info-text
+            テスト
+        .info-contents
+          .info-name
+            配送料の負担
+          .info-text
+            テスト
+        .info-contents
+          .info-name
+            配送の方法
+          .info-text
+            テスト
+        .info-contents
+          .info-name
+            配送元地域
+          .info-text
+            テスト
+      .price-form
+        .price-form--prize
+          ¥2,380
+        .price-form--tax
+          (税込)送料込み
+      .item-buy-btn
+        購入画面に進む
+      .item-check
+        この商品はゆうゆうフリマ便を利用しているため、アプリからのみ購入できます。
+      .item-text
+        NeinGrenze
+        スマホ用アクセサリーの広角レンズです。
+        カメラ部分にクリップで固定して使用します。
+        旅行で1度だけ使用しました。
+        ちなみにiPhone8でした。
+        色はローズゴールドです。
+
+        自宅保管の中古品です。
+        神経質な方のご購入はお控え下さい。
+        付属品：ハードポーチ、ソフトポーチ、レンズキャップ2個
+        購入価格：3,850円
+      .item-form-footer
+        .item-form-footer--iine
+          ♡  いいね！
+        .item-form-footer--alert
+          %i.far.fa-flag
+          不適切な商品の報告
+        .item-form-footer--safety
+          %i.fas.fa-lock
+            あんしん・あんぜんへの取り組み
+
+  .comment-form
+    .comment-form--space
+    .comment-form--alert
+      相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+    %textarea.textarea-default{name:"body",type:"text",value:""}
+    %button.gray-btn{type:"submit"}
+      コメントする
+
+
+= render "shared/footer"

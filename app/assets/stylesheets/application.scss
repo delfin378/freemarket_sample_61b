@@ -1,11 +1,21 @@
 @import "reset";
-@import "modules/posts";
-@import "modules/header";
-@import "modules/footer";
-@import "modules/camera";
-@import "modules/sellcontents";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+
+//トップページ
+@import "modules/posts";
+
+//ヘッダー画面
+@import "modules/header";
+
+//フッター画面
+@import "modules/footer";
+
+//カメラアイコン
+@import "modules/camera";
+
+//商品出品
+@import "sellcontents/sellcontents";
 
 //user-credit,mypage,profile,checkのscss関連
 //画面全体に当てるもの
@@ -35,3 +45,7 @@
 @import "confirm/_main-confirm";
 @import "confirm/_footer-confirm";
 @import "confirm/_confirm-box";
+
+//商品詳細ページ
+@import "productiondetail/_productiondetail.scss";
+
