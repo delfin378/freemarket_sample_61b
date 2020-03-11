@@ -1,0 +1,172 @@
+.space{
+  width: 100%;
+  height: 40px;
+  background-color: lightgray;
+}
+
+.productdetail{
+  width: 100%;
+  height: 1550px;
+  background-color: lightgray;
+.product-form{
+  width: 800px;
+  height: 1140px;
+  margin: 0 auto;
+  background-color: white;
+  margin-bottom: 30px;
+  .product-former{
+    width: 700px;
+    height: 1000px;
+    margin: auto;
+    .product-name{
+      width: 670px;
+      height: 40px;
+      font-size: 30px;
+      font-weight: 600;
+      padding-top: 30px;
+      padding-left: 20px;
+      }
+      .product-contents{
+        width: 350px;
+        height: 450px;
+        margin-top: 60px;
+        margin-left: 20px;
+        float: left;  
+        &--collection{
+          width: 330px;
+          height:60px;
+          background-color: lightblue;
+          }
+        }
+      .product-infomation{
+        float: right; 
+        margin-top: 60px; 
+        width: 330px;
+        height: 500px;
+        .info-contents{
+          width: 320px;
+          height: 70px;
+          .info-name{
+            background-color: #fafafa;
+            width: 120px;
+            height: 69px;
+            display: inline-block;
+            padding-left: 8px;
+            padding-top: 10px;
+          }
+          .info-text{
+            display: inline-block;
+            background-color: rgb(235, 230, 230);
+            width: 190px;
+            height: 68px;
+            padding-left: 8px;
+            padding-top: 10px;
+           }
+          }
+        }
+        .price-form{
+          height: 60px;
+          width: 650px;
+          margin-top: 570px;
+          margin-left: 30px;
+          text-align: center;
+          &--prize{
+            font-size: 45px;
+            display: inline-block;
+            font-weight: 600;
+          }
+          &--tax{
+            font-size: 18px;
+            display: inline-block;
+
+          }
+        }
+        .item-buy-btn{
+          font-size: 24px;
+          line-height: 60px;
+          background-color: red;
+          color: white;
+          margin-top: 30px;
+          text-align: center;
+          font-weight: 600;
+          margin-bottom: 20px;
+        }
+        .item-check{
+          height: 30px;
+          width: 690px;
+          color: red;
+          font-size: 14px;
+          text-align: center;
+        }
+        .item-text{
+          width: 620px;
+          height: 250px;
+          margin: auto;
+          font-size: 18px;
+        }
+        .item-form-footer{
+          height: 35px;
+          width: 650px;
+          margin: auto;
+          font-size: 15px;
+          &--iine{
+            display: inline-block;
+            padding: 5px 14px;
+            border-radius: 40px;
+            background-color: rgb(231, 230, 230);
+            height: 33px;
+            width: 115px;
+          }
+          &--alert{
+            display: inline-block;
+            padding: 5px 16px;
+            border-radius: 40px;
+            background-color: rgb(231, 230, 230);
+            height: 33px;
+            width: 215px;
+            margin-left: 30px;
+          }
+          &--safety{
+            display: inline-block;
+            color: lightskyblue;
+            padding-left: 25px;
+          }
+        }
+      }
+    }
+    .comment-form{
+      width: 800px;
+      height: 300px;
+      background-color: white;
+      margin:  0 auto;
+      &--space{
+        width: 650px;
+        height: 20px;
+        margin: 0 auto;
+      }
+      &--alert{
+        width: 650px;
+        height: 55px;
+        padding: 8px;
+        font-size: 14px;
+        margin: 0 auto;
+        background-color: rgb(247, 198, 178);
+      }
+      .textarea-default{
+        width: 650px;
+        height: 100px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+        margin-left: 75px;
+        margin-top: 20px;
+      }
+      .gray-btn{
+        width: 650px;
+        margin-left: 75px;
+        margin-top: 15px;
+        background-color: lightslategrey;
+        border: 1px solid black;
+      }
+    }
+  }
