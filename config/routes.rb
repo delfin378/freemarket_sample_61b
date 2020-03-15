@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :mypage, only: [:index]
   resources :credit, only: [:index]
   resources :confirm, only: [:index]
+  resources :productiondetail, only: [:index]
 end
