@@ -1,0 +1,15 @@
+.login-header {
+  height: 128px;
+  text-align: center;
+  background: #f5f5f5;
+}
+.login-header-box {
+  &__icon {
+    img {
+      margin: 40px 0 0;
+      width: 185px;
+      height: 49px;
+      line-height: 49px;
+     }
+  }
+}

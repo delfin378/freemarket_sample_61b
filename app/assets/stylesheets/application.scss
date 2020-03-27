@@ -49,6 +49,42 @@
 //商品詳細ページ
 @import "productiondetail/_productiondetail.scss";
 
+//ユーザー新規登録画面
+//共通
+@import "registration/_footer-registration";
+@import "registration/_registration-box";
+//画面全体
+@import "information/_information-box";
+@import "phone/_phone-box";
+@import "address/_address-box";
+@import "payment/_payment-box";
+@import "complete/_complete-box";
+//会員情報入力
+@import "information/_main-information";
+@import "information/_header-information";
+//電話番号認証
+@import "phone/_header-phone";
+@import "phone/_main-phone";
+//住所入力
+@import "address/_header-address";
+@import "address/_main-address";
+//お支払い方法
+@import "payment/_header-payment";
+@import "payment/_main-payment";
+//完了画面
+@import "complete/_header-complete";
+@import "complete/_main-complete";
+
+//ユーザーログイン画面
+@import "login/_login-box";
+@import "login/_header-login";
+@import "login/_main-login";
+
+//ユーザーサインアップ画面
+@import "signup/_signup-screen";
+@import "signup/_signup-box";
+@import "signup/_header-signup";
+@import "signup/_main-signup";
 //ユーザーログアウト画面
 @import "logout/_header-menu-logout";
 @import "logout/_left_box-logout";
