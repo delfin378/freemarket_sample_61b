@@ -1,0 +1,25 @@
+.login-main
+  .login-main__box
+    %p アカウントをお持ちでない方はこちら
+    %button.login{type:"submit"} 新規会員登録
+  .login-main__form
+    %button.Facebook{type:"submit"} Facebookでログイン
+    .facebook
+      %i= icon('fab', 'facebook-square')
+    %button.Google{type:"submit"} Googleでログイン
+    .Google
+      %i= icon('fab', 'google')
+  .login-main-container
+    .login-main-container__action
+      .login-main-container__input
+        %textarea.mailaddress{name: "introduction",placeholder: "メールアドレス"}
+        %textarea.password{name: "introduction",placeholder: "パスワード"}
+      .login-main-container-authentication
+        .g-recaptcha.login-captcha{"data-sitekey":"6LfZGCYTAAAAAHoK-s7Lg5OdYg5Fq4susvALmZoc"}
+          %div{style:"width: 304px; height: 78px;"}
+            %div
+              %iframe{frameborder:"0", height:"78", name:"a-jkhcpavzy9bo", role:"presentation", sandbox:"allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox", scrolling:"no", src:"https://www.google.com/recaptcha/api2/anchor?ar=2&k=6LfZGCYTAAAAAHoK-s7Lg5OdYg5Fq4susvALmZoc&co=aHR0cHM6Ly93d3cubWVyY2FyaS5jb206NDQz&hl=ja&v=qpy2aGtSgsYPZzCoYWjcaBCo&size=normal&cb=b8i0gduo5rrk", width:"304"}
+            %textarea#g-recaptcha-response.g-recaptcha-response{name:"g-recaptcha-response", style:"width: 250px;height: 40px;border: 1px solid rgb(193, 193, 193);margin: 10px 25px;padding: 0px;resize: none;display: none;"}
+          %button.default{type:"submit"} ログイン
+          .password
+            %p パスワードをお忘れの方
