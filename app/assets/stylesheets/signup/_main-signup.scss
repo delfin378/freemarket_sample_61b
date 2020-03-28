@@ -1,0 +1,48 @@
+.signup-main {
+  &__header {
+    background: #fff;
+  }
+  h2 {
+    font-size: 22px;
+    padding: 32px;
+    text-align: center;
+    line-height: 1.5;
+    font-weight: bold;
+  }
+  &__box {
+    padding: 24px 16px 40px;
+    border-top: 1px solid #f5f5f5;
+  }
+  &__form {
+    max-width: 343px;
+    margin: 0 auto;
+    button.mailaddress {
+      margin: 5px 0 0 0;
+      color: #fff;
+      background-color: #ea352d;
+      display: block;
+      width: 100%;
+      line-height: 48px;
+      font-size: 14px;
+      border: 1px solid transparent;
+      text-align: center;
+    }
+    button.Facebook {
+      margin: 16px 0 0;
+      background: #385185;
+      color: #fff;
+      display: block;
+      width: 100%;
+      line-height: 48px;
+      font-size: 14px;
+      border: 1px solid transparent;
+      text-align: center;
+    }
+  }
+    button.Google {
+      margin: 16px 0 0;
+      background: #fff;
+      border: #979797 solid 1px;
+      color: #333;
+    }
+  }
