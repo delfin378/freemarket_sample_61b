@@ -13,19 +13,16 @@
     text-align: center;
     font-size: 24px;
     font-weight: 600;
+    background: #fff;
   }
   .profile-contents-nameform{
     height: 156px;
-    background: url(assets/images/user_bg.jpg);
+    background-color: greenyellow;
     position: relative;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-size: auto;
-    box-sizing: border-box;
     &--contents{
       width: 500px;
       height: 45px;
-      margin-top: -160px;
+      margin-top: -200px;
     }
     .fas.fa-user-circle{
       font-size: 32px;
@@ -33,28 +30,32 @@
       height: 45px;
       width: 40px;
       margin-top: 80px;
-      margin-left: 180px;
+      margin-left: 335px;
       padding-top: 5px;
       padding-left: 5px;
       background-color: gray;
     }
     .name-default{
       height: 45px;
-      margin-left: 8px;
+      margin-left:  100px;
       font-size: 23px;
       padding-top: 3px;
     }
   }
   .profile-contents-textcontents{
     height: 340px;
+    background: #fff;
     .textarea-default{
       width: 670px;
       height: 220px;
+      margin-top: 20px;
+      margin-left: 15px;
     }
     &--change{
       width: 670px;
       height: 50px;
       padding-top: 13px;
+      margin-left: 15px;
       margin-top: 10px;
       background-color: red;
       text-align: center;
