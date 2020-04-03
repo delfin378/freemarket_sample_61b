@@ -17,18 +17,18 @@
   }
   .profile-contents-nameform{
     height: 156px;
-    width: 100%;
-    background-color: lightsteelblue;
+    position: absolute;
     &--contents{
       width: 500px;
       height: 45px;
+      margin-top: -200px;
     }
     .fas.fa-user-circle{
       font-size: 32px;
       color: white;
       height: 45px;
       width: 40px;
-      margin-top: 30px;
+      margin-top: 40px;
       margin-left: 345px;
       padding-top: 5px;
       padding-left: 5px;
@@ -36,13 +36,14 @@
     }
     .name-default{
       height: 45px;
-      margin-left: 100px;
+      margin-left:  100px;
       font-size: 23px;
       padding-top: 3px;
     }
   }
   .profile-contents-textcontents{
-    margin-top: 10px;
+    margin-top: 170px;
+    position: relative;
     height: 340px;
     background: #fff;
     .textarea-default{
