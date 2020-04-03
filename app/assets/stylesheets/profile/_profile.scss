@@ -17,7 +17,7 @@
   }
   .profile-contents-nameform{
     height: 156px;
-    position: absolute;
+    position: relative;
     &--contents{
       width: 500px;
       height: 45px;
@@ -42,14 +42,12 @@
     }
   }
   .profile-contents-textcontents{
-    margin-top: 170px;
-    position: relative;
     height: 340px;
     background: #fff;
     .textarea-default{
       width: 670px;
       height: 220px;
-      margin-top: 10px;
+      margin-top: 20px;
       margin-left: 15px;
     }
     &--change{
