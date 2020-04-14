@@ -1,0 +1,127 @@
+.login-main {
+  max-width: none;
+  width: 456px;
+  margin: 0 auto;
+  background: #fff;
+  p {
+    font-size: 14px;
+    text-align: center;
+  }
+  &__box {
+    padding: 40px 64px;
+  }
+  button.login {
+    display: block;
+    margin: 8px 0 0;
+    border: 1px solid #0099e8;
+    background: #0099e8;
+    color: #fff;
+    line-height: 40px;
+  }
+  &__form {
+    padding: 32px 64px;
+    border-top: 1px solid #eee;
+  }
+  button.Facebook {
+    margin: 0;
+    background: #385185;
+    color: #fff;
+    display: block;
+    width: 100%;
+    line-height: 48px;
+    font-size: 14px;
+    border: 1px solid transparent;
+  }
+   .facebook {
+    i {display: inline-block;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    top: 50%;
+    left: 16px;
+    }
+  }
+  button.Google {
+    margin: 16px 0 0;
+    background: #fff;
+    border: #979797 solid 1px;
+    color: #333;
+    display: block;
+    width: 100%;
+    line-height: 48px;
+    font-size: 14px;
+   }
+}
+  .Google {
+    i {display: inline-block;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    top: 50%;
+    left: 16px;
+    }
+  }
+.login-main-container {
+  &__action {
+    padding: 24px 64px 32px;
+    border: 0;
+  }
+  &__input {
+    margin: 0;
+    textarea.mailaddress {
+      height: 48px;
+      padding: 10px 16px 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      background: #fff;
+      line-height: 1.5;
+      font-size: 16px;
+      width: 100%;
+    }
+    textarea.password {
+      margin: 24px 0 0;
+      width: 100%;
+      height: 48px;
+      padding: 10px 16px 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      background: #fff;
+      line-height: 1.5;
+      font-size: 16px;
+    }
+  }
+}
+.login-main-container-authentication {
+  margin: 24px 0 0;
+  textarea#g-recaptcha-response.g-recaptcha-response {
+    max-width: none;
+    width: 456px;
+    margin: 0 auto;
+  }
+  button.default {
+    margin: 24px 0 0;
+    background: #ea352d;
+    border: 1px solid #ea352d;
+    color: #fff;
+    display: block;
+    width: 100%;
+    line-height: 48px;
+    font-size: 14px;
+    text-align: center;
+    min-height: 1.5em;
+  }
+  .password {
+    p {
+      display: block;
+      margin: 40px 0 0;
+      color: #0099e8;
+      text-decoration: none;
+      font-size: 14px;
+      text-align: left;
+    }
+  }
+}

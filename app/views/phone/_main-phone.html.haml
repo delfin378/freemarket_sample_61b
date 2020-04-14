@@ -1,0 +1,15 @@
+.phone-main
+  %section.phone-container
+    %h2 電話番号の確認
+  %form.phone-contents
+    .phone-box-content
+      .phone-box-content__number
+      %label 携帯電話の番号
+      .phone-number
+        %textarea.phone-number{name: "introduction",placeholder: "携帯電話の番号を入力"}
+        %p 本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
+      %button.default{type:"submit"} SMSを送信する
+      %p ※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。
+      .phone-check
+        %p 電話番号の確認が必要な理由
+        = icon('fas', 'chevron-right')

@@ -1,0 +1,43 @@
+.confirm-main
+  %section.confirm-main-box
+    %h2 購入内容の確認
+  %section.confirm-product-box
+    .confirm-product-box__contents
+      .confirm-product-box__content
+        %h3
+          = image_tag "#{asset_path "dummy_product.png"}" ,size: "188x252" ,alt:"dummy_product"
+      .confirm-product-box-detail
+        .confirm-product-box-detail__name
+          %h2 [新品]ブランド  服  サイズ
+          %p ¥2,000  送料込み
+  %section.confirm-product-main
+    .confirm-product-main__container
+      %form.confirm-product-main__detail
+        %ul.product-price
+          %li.product-price__table
+            .product-price__payment
+              支払い金額
+            .product-price__number
+              %span ¥2,000
+        %ul.product-price-point
+          %li.product-price-point__use
+            .product-price-point__number
+              = icon('fas', 'square')
+              %lavel ポイントを使用（所持ポイント:P0)
+        %section.product-payment
+          .product-payment__box
+            %h2 支払い方法
+            %p
+              %i= icon('fas', 'plus-circle')
+              %text 登録してください
+        %section.product-address
+          .product-address-box
+            .product-address-box-text
+              %h2 配送先
+              %a 変更する
+            .product-address-box-info
+              %p 〒000-0000
+              %p 都道府県
+              %p 名前
+        %section.product-purchase
+          %button.purchase{type:"submit"} 購入する
