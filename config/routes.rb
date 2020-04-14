@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root "posts#index"
-  resources :sellcontents, only: [:index]
+  root "products#index"
+  resources :products, except: :show
   resources :productiondetail, only: [:index]
 end
