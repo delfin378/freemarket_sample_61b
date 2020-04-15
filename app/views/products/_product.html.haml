@@ -1,0 +1,8 @@
+.content
+  - product.images.each do |image|
+    = image_tag image.src.url, class:"productimage"
+    .productbox-price ¥ #{product.price}
+    .product-textform
+      .productbox-name #{product.name}
+    
+  
