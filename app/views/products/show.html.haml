@@ -49,7 +49,8 @@
               =@product.shipping_origin
         .price-form
           .price-form--prize
-            = number_to_currency(@product.price,format: "%u%n",unit:"¥",precision: 0)
+            ¥
+            =@product.price
           .price-form--tax
             (税込)送料込み
         .item-buy-btn
