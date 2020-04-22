@@ -320,7 +320,7 @@
 
 .productimage{
   padding-top: 30px;
-  width: 188px;
+  width: 200px;
   height: 218px;
   position: absolute;
 }
@@ -334,14 +334,15 @@
   font-size: 17px;
   color: white;
   height: 28px;
-  width: 105px;
+  width: 115px;
   top: 170px;
 }
 
 .product-textform{
+  overflow: hidden;
   margin-top: 190px;
-  width: 188px;
-  height: 65px;
+  width: 200px;
+  height: 75px;
   background-color: white;
   filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
   .productbox-name{

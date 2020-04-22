@@ -17,6 +17,9 @@
 //商品出品
 @import "products/products";
 
+//商品詳細ページ
+@import "products/show";
+
 //user-credit,mypage,profile,checkのscss関連
 //画面全体に当てるもの
 @import "user-box/_container.scss";
@@ -46,8 +49,7 @@
 @import "confirm/_footer-confirm";
 @import "confirm/_confirm-box";
 
-//商品詳細ページ
-@import "productiondetail/_productiondetail.scss";
+
 
 //ユーザー新規登録画面
 //共通
