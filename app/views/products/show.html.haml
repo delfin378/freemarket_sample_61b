@@ -1,0 +1,80 @@
+= render "shared/header"
+
+.space
+.productdetail
+  = form_for @product do |f|
+    .product-form
+      .product-former
+        .product-name
+          =@product.name
+        .product-contents
+          - @product.images.each do |image|
+            = image_tag image.src.url, class:"product-image"
+          .product-contents--collection
+        .product-infomation
+          .info-contents
+            .info-name
+              出品者
+            .info-text
+              テスト
+          .info-contents
+            .info-name
+              カテゴリー
+            .info-text
+              =@product.category
+          .info-contents
+            .info-name
+              ブランド
+            .info-text
+              =@product.brand
+          .info-contents
+            .info-name
+              商品の状態
+            .info-text
+              =@product.product_situation 
+          .info-contents
+            .info-name
+              配送料の負担
+            .info-text
+              =@product.shipping_charges   
+          .info-contents
+            .info-name
+              配送までの日数
+            .info-text
+              =@product.arrival_days
+          .info-contents
+            .info-name
+              配送元地域
+            .info-text
+              =@product.shipping_origin
+        .price-form
+          .price-form--prize
+            = number_to_currency(@product.price,format: "%u%n",unit:"¥",precision: 0)
+          .price-form--tax
+            (税込)送料込み
+        .item-buy-btn
+          購入画面に進む
+        .item-check
+          この商品はゆうゆうフリマ便を利用しているため、アプリからのみ購入できます。
+        .item-text
+          =@product.product_explanation
+        .item-form-footer
+          .item-form-footer--iine
+            ♡  いいね！
+          .item-form-footer--alert
+            %i.far.fa-flag
+            不適切な商品の報告
+          .item-form-footer--safety
+            %i.fas.fa-lock
+              あんしん・あんぜんへの取り組み
+
+    .comment-form
+      .comment-form--space
+      .comment-form--alert
+        相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+      %textarea.textarea-default{name:"body",type:"text",value:""}
+      %button.gray-btn{type:"submit"}
+        コメントする
+
+
+= render "shared/footer"

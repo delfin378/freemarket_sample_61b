@@ -47,11 +47,12 @@
 }
 
 .header-bottom {
-  width: 1020px;
+  width: 100%;
   margin: 0 auto;
   padding-top: 15px;
   font-size: 15px;
   &--list{
+    padding-left: 70px;
     display: flex;
     .fa-list{
       color: red;

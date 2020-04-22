@@ -45,18 +45,18 @@
           .product-detail-form--hissu
             必須
           .product-detail-form--tab
-            = f.select :category, [["レディース",0],["メンズ",1],["ベビー・キッズ",2],["インテリア・小物",3],["おもちゃ・ホビー",4],["香水・美容",5],["家電・スマホ",6],["スポーツ・レジャー",7],["ハンドメイト",8],["自転車・バイク",9],["その他",10]], prompt: "選択してください", class: "select"
+            = f.select :category,Product.categories.keys,prompt: "選択してください", class: "select"
           .product-detail-form--name
             ブランド
           .product-detail-form--ninni
             任意
-          = f.text_field :brand, class: "name-form",placeholder:"例）シャネル",type:"text",value:""
+          = f.text_field :brand, class: "name-form",placeholder:"例）シャネル"
           .product-detail-form--name
             商品の状態
           .product-detail-form--hissu
             必須
           .product-detail-form--tab
-            = f.select :product_situation, [["新品、未使用",0],["未使用に近い",1],["目立った傷や汚れなし",2],["やや傷や汚れあり",3],["傷や汚れあり",4],["全体的に状態が悪い",5],["中国",6],["九州",7],["沖縄",8],["その他",9]], prompt: "選択してください", class: "select"
+            = f.select :product_situation,Product.product_situations.keys,prompt: "選択してください", class: "select"
       .production-delivery
         .production-delivery-form
           .production-delivery-form--exp
@@ -66,19 +66,19 @@
           .production-delivery-form--hissu
             必須
           .production-delivery-form--tab
-            = f.select :shipping_charges, [["送料込み(出品者負担)",0],["着払い(購入者負担)",1]], prompt: "選択してください", class: "select"
+            = f.select :shipping_charges,Product.shipping_charges.keys,prompt: "選択してください", class: "select"
           .production-delivery-form--black
             発送元の地域
           .production-delivery-form--hissu
             必須
           .production-delivery-form--tab
-            = f.select :shipping_origin, [["北海道",0],["東北",1],["関東",2],["中部",3],["関西",4],["四国",5],["中国",6],["九州",7],["沖縄",8],["その他",9]], prompt: "選択してください", class: "select"
+            = f.select :shipping_origin,Product.shipping_origins.keys, prompt: "選択してください", class: "select"
           .production-delivery-form--black
             発送までの日数
           .production-delivery-form--hissu
             必須
           .production-delivery-form--tab
-            = f.select :arrival_days, [["1~2日",0],["3~4日",1],["5~7日",2],["10日以内",3]], prompt: "選択してください", class: "select"
+            = f.select :arrival_days,Product.arrival_days.keys, prompt: "選択してください", class: "select"
       .production-price
         .production-price-header
           価格（¥300〜9,999,999）
