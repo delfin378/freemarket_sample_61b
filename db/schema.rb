@@ -26,14 +26,13 @@ ActiveRecord::Schema.define(version: 20200311090008) do
     t.text     "product_explanation", limit: 65535,             null: false
     t.integer  "trade_status",                      default: 0
     t.integer  "category"
-    t.string   "brand",               limit: 40
+    t.text     "brand",               limit: 65535
     t.string   "product_situation"
     t.integer  "shipping_charges"
     t.integer  "shipping_origin"
     t.integer  "arrival_days"
     t.datetime "created_at",                                    null: false
     t.datetime "updated_at",                                    null: false
-    t.index ["brand"], name: "index_products_on_brand", using: :btree
     t.index ["name"], name: "index_products_on_name", using: :btree
     t.index ["price"], name: "index_products_on_price", using: :btree
   end

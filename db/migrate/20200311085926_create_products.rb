@@ -6,7 +6,7 @@ class CreateProducts < ActiveRecord::Migration[5.0]
       t.text     :product_explanation,null:false
       t.integer  :trade_status, default: 0
       t.integer  :category           
-      t.string   :brand,              limit:40,index: true
+      t.text     :brand
       t.string   :product_situation  
       t.integer  :shipping_charges   
       t.integer  :shipping_origin    
