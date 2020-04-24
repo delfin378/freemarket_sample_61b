@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  before_action :set_product, except: [:index, :new, :create, :edit]
   def index
     @products = Product.includes(:images).order('created_at DESC')
   end
@@ -18,7 +19,7 @@ class ProductsController < ApplicationController
   end
 
   def edit
-    
+   @product = Product.find(params[:id])
   end
 
   def show
