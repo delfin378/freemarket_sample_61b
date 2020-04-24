@@ -1,1 +1,107 @@
-= render partial: 'form'
+.product-page
+  = form_for @product do |f|
+    .fmarket_logo
+      =image_tag "#{"fmarket_logo.png"}",size: '185x55',alt:"fmarket"
+
+    .sellcontents
+      .sellcontents-pict
+        .sellcontents-pict-form
+          .sellcontents-pict-form--name
+            出品画像
+          .sellcontents-pict-form--hissu
+            必須
+          .sellcontents-pict-form--upload
+            最大4枚までアップロードできます
+          %label{class:"form-file"}
+            .form-contents
+              = f.fields_for :images do |i|
+                = i.file_field :src, class: "image", style: "display:none;", id: "file"
+                .fas.fa-camera
+                .camera-text
+                  ドラッグアンドドロップ
+                .camera-text2
+                  またはクリックしてファイルをアップロード
+      .product-status
+        .product-status-nameform
+          .product-status-nameform--name
+            商品名
+          .product-status-nameform--hissu
+            必須
+          = f.text_field :name, class: "name-form", placeholder: "商品名（必須40文字まで）"
+
+        .product-status-textform
+          .product-status-nameform--name
+            商品の説明
+          .product-status-nameform--hissu
+            必須
+          = f.text_area :product_explanation,class: "statusform",type:"text",placeholder:"商品の説明（必須 1,000文字以内）\n（色、素材、重さ、定価、注意点など）\n\n例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。\n          "
+    
+      .product-detail
+        .product-detail-form
+          .product-detail-form--head
+            商品の詳細
+          .product-detail-form--name
+            カテゴリー
+          .product-detail-form--hissu
+            必須
+          .product-detail-form--tab
+            = f.select :category,Product.categories.keys,prompt: "選択してください", class: "select"
+          .product-detail-form--name
+            ブランド
+          .product-detail-form--ninni
+            任意
+          = f.text_field :brand, class: "name-form",placeholder:"例）シャネル"
+          .product-detail-form--name
+            商品の状態
+          .product-detail-form--hissu
+            必須
+          .product-detail-form--tab
+            = f.select :product_situation,Product.product_situations.keys,prompt: "選択してください", class: "select"
+      .production-delivery
+        .production-delivery-form
+          .production-delivery-form--exp
+            配送について
+          .production-delivery-form--black
+            配送料の負担
+          .production-delivery-form--hissu
+            必須
+          .production-delivery-form--tab
+            = f.select :shipping_charges,Product.shipping_charges.keys,prompt: "選択してください", class: "select"
+          .production-delivery-form--black
+            発送元の地域
+          .production-delivery-form--hissu
+            必須
+          .production-delivery-form--tab
+            = f.select :shipping_origin,Product.shipping_origins.keys, prompt: "選択してください", class: "select"
+          .production-delivery-form--black
+            発送までの日数
+          .production-delivery-form--hissu
+            必須
+          .production-delivery-form--tab
+            = f.select :arrival_days,Product.arrival_days.keys, prompt: "選択してください", class: "select"
+      .production-price
+        .production-price-header
+          価格（¥300〜9,999,999）
+        .production-price--black
+          販売価格
+        .production-price--hissu
+          必須
+        .production-price--mark
+          ¥
+          = f.number_field :price ,class: "price-form"
+        
+        .production-price-commision
+          販売手数料（10%）
+          .production-price-commision--charge
+            ¥
+        .production-price-profit
+          販売利益     
+          .production-price-profit--charge
+            ¥
+      .decideform
+        = f.submit "編集する", class:'red-btn'
+        = link_to "もどる", :back, class: 'gray-btn'
+        .decideform-alert
+          禁止されている行為および出品物を必ずご確認ください。偽ブランド品や盗品物などの販売は犯罪であり、法律により処罰される可能性があります。 また、出品をもちまして加盟店規約に同意したことになります。
+    .fmarket_logo
+      =image_tag "#{"fmarket_logo.png"}",size: '185x55',alt:"fmarket"

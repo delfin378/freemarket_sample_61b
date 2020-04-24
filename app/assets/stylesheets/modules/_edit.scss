@@ -1,20 +1,18 @@
-.fas.fa-camera{
-
-}
-.camera{
+.editor{
   border-radius: 50%;
   bottom: 32px;
   height: 160px;
   right: 32px;
   width: 160px;
   position: fixed;
-  background-color: red;
+  background-color: green;
   color: white;
   display: block;
+  z-index: 1;
   text-decoration: none;
-  font-size: 50px;
-  padding-top: 35px;
-  padding-left: 30px;
   a:link { color: white; text-decoration: none; }
   a:visited { color: white; }
+  font-size: 60px;
+  padding-left: 22px;
+  padding-top: 30px;
 }
