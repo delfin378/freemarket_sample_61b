@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :set_product, except: [:index, :new, :create, :edit]
+  before_action :set_product, except: [:index, :new, :create]
   def index
     @products = Product.includes(:images).order('created_at DESC')
   end
@@ -19,22 +19,25 @@ class ProductsController < ApplicationController
   end
 
   def edit
-   @product = Product.find(params[:id])
   end
 
   def show
-   @product = Product.find(params[:id])
   end
 
   def update
     if @product.update(product_params)
-      redirect_to root_path
+      render :show
     else
       render :edit
     end
   end
 
   def destroy
+    if @product.destroy
+      redirect_to root_path, notice: '削除しました'
+    else
+      render :show
+    end
   end
 
   private
