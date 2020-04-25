@@ -28,15 +28,19 @@ class ProductsController < ApplicationController
 
   def update
     if @product.update(product_params)
-      redirect_to root_path
+      render :show
     else
       render :edit
     end
   end
 
   def destroy
-    @product.destroy
-    redirect_to root_path
+  @product=Product.find(params[:id])
+    if product.destroy
+      redirect_to root_path, notice: '削除しました'
+    else
+      render :edit
+    end
   end
 
   private
