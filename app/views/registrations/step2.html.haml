@@ -1,0 +1,53 @@
+.registration-screen
+  .header-phone
+    %h1 
+      =image_tag "fmarket_logo.png",size: '125x36',alt:"fmarket"
+    %nav.registration-box
+      %ul.registration-procedure
+        %li.information-user
+          会員情報
+          .information-progress-status
+            .information-progress-status__bar
+        %li.phone
+          電話番号認証
+          .phone-progress-status
+          .phone-progress-status__bar
+        %li.address
+          住所入力
+          .address-progress-status
+            .address-progress-status__bar
+        %li.payment
+          支払い方法
+          .payment-progress-status
+          .payment-progress-status__bar
+        %li.complete
+          完了
+          .complete-progress-status
+          .complete-progress-status__bar
+  .phone-box
+    .phone-main
+      %section.phone-container
+        %h2 電話番号の確認
+      .phone-contents
+        .phone-box-content
+          .phone-box-content__number
+          %label 携帯電話の番号
+          .phone-number
+          = form_for(@user, url: step3_registrations_path, method: :get) do |f|
+            = f.text_field :phone_number
+            %p 本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
+            = f.submit "次へ進む", class: 'btn btn-warning',url: step3_registrations_path
+          %p ※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。
+          .phone-check
+            %p 電話番号の確認が必要な理由
+            = icon('fas', 'chevron-right')
+  .footer-registration-box 
+    %ul.footer-registration-box-content
+      %li.footer-registration-box-content__list
+        %a プライバシーポリシー
+      %li.footer-registration-box-content__list
+        %a メルカリ利用規約
+      %li.footer-registration-box-content__list
+        %a 特定商取引に関する表記
+    .footer-registration-box-content__icon
+      =image_tag "fmarket_logo_white.png",alt:"fmarket"

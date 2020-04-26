@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  devise_for :users
+  resources :registrations do
+    collection do
+      get 'step1'
+      get 'step2'
+      get 'step3'
+      get 'step4'
+      post 'step5' #登録完了後
+    end
+  end
   root "posts#index"
   resources :sellcontents, only: [:index]
   resources :check, only: [:index]
@@ -8,4 +18,5 @@ Rails.application.routes.draw do
   resources :confirm, only: [:index]
   resources :productiondetail, only: [:index]
   resources :logout, only: [:index]
+  resources :registrations, only: [:new, :index, :create]
 end
