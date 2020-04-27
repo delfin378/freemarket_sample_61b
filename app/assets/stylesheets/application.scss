@@ -3,7 +3,7 @@
 @import "font-awesome";
 
 //トップページ
-@import "modules/posts";
+@import "modules/toppage";
 
 //ヘッダー画面
 @import "modules/header";
@@ -14,8 +14,17 @@
 //カメラアイコン
 @import "modules/camera";
 
+//編集アイコン
+@import "modules/edit";
+
+//削除アイコン
+@import "modules/delete";
+
 //商品出品
-@import "sellcontents/sellcontents";
+@import "products/products";
+
+//商品詳細ページ
+@import "products/show";
 
 //user-credit,mypage,profile,checkのscss関連
 //画面全体に当てるもの
@@ -46,8 +55,7 @@
 @import "confirm/_footer-confirm";
 @import "confirm/_confirm-box";
 
-//商品詳細ページ
-@import "productiondetail/_productiondetail.scss";
+
 
 //ユーザー新規登録画面
 //共通

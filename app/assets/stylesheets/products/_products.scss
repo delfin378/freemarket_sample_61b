@@ -45,13 +45,24 @@
       &--upload{
         margin-top: 10px;
       }
-      .sellcontents-pict-form-file{
+      .form-file{
+        width: 620px;
         height: 162px;
-        background-color:rgb(204, 204, 204);
         text-align: center;
+        .form-contents{
+          width: 620px;
+          height: 162px;
+          background-color: lightslategray;
+        }
+        .new_product{
+          height: 162px;
+          position: relative;
+          padding-top: 40px;
+        }
         .fa-camera{
           font-size: 20px;
-          padding-top: 55px;
+          padding-top: 35px;
+          
         }
       }
     }
@@ -95,7 +106,7 @@
       .statusform{
         display:block;
         width: 600px;
-        margin-top:15px;
+        margin-top:20px;
         border-radius: 4px;
         outline: none;
         border: 1px solid #ccc;
@@ -237,7 +248,7 @@
       padding-left: 200px;
       display: inline-block;
     }
-    .priceform{
+    .price-form{
       height: 44px;
       width: 265px;
       border-radius: 4px;
@@ -266,7 +277,7 @@
     width: 620px;
     height: 300px;
     margin: 0 auto;
-    .decideform-sellicon{
+    .red-btn{
       margin-left: 170px;
       background-color: #ea352d;
       color: #fff;
@@ -299,4 +310,45 @@
       color: gray;
     }
   }
+}
+
+.content{
+  display: inline-block;
+  margin-left: 20px;
+
+
+
+.productimage{
+  padding-top: 30px;
+  width: 200px;
+  height: 218px;
+  position: absolute;
+}
+
+.productbox-price{
+  align-items: center;
+  padding-left: 7px;
+  position: relative;
+  background: rgba(0,0,0,.4);
+  border-radius: 0 14px 14px 0;
+  font-size: 17px;
+  color: white;
+  height: 28px;
+  width: 115px;
+  top: 170px;
+}
+
+.product-textform{
+  overflow: hidden;
+  margin-top: 190px;
+  width: 200px;
+  height: 75px;
+  background-color: white;
+  filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
+  .productbox-name{
+    padding-top: 5px;
+    padding-left: 5px;
+    color: black;
+  }
+}
 }
