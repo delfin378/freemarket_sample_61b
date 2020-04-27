@@ -68,6 +68,7 @@ gem 'pry-rails'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog-aws'
+gem 'active_hash'
 
 group :production do
   gem 'unicorn', '5.4.1'
