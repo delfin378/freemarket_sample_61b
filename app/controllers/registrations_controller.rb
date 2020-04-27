@@ -1,10 +1,10 @@
 class RegistrationsController < ApplicationController
 
-  def step1
+  def new
     @user = User.new
   end
 
-  def step2
+  def new_phone
     session[:nickname] = user_params[:nickname]
     session[:email] = user_params[:email]
     session[:password] = user_params[:password]
@@ -18,12 +18,12 @@ class RegistrationsController < ApplicationController
     @user = User.new
   end
 
-  def step3 
+  def new_address
     session[:phone_number] = user_params[:phone_number]
     @address = Address.new
   end
 
-  def step4
+  def new_credit
     session[:family_name] = address_params[:family_name]
     session[:first_name] = address_params[:first_name]
     session[:family_name_kana] = address_params[:family_name_kana]
@@ -38,7 +38,7 @@ class RegistrationsController < ApplicationController
   end
 
 
-  def step5
+  def complete
     session[:card_number] = card_params[:card_number]
     session[:expiration_month] = card_params[:expiration_month]
     session[:expiration_year] = card_params[:expiration_year]

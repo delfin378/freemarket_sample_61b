@@ -2,15 +2,13 @@ Rails.application.routes.draw do
   devise_for :users
   resources :registrations do
     collection do
-      get 'step1'
-      get 'step2'
-      get 'step3'
-      get 'step4'
-      post 'step5' #登録完了後
+      get 'new' #会員情報入力
+      get 'new_phone' #電話番号認証
+      get 'new_address' #住所入力
+      get 'new_credit' #クレジットカード追加
+      post 'complete' #登録完了
     end
   end
-  root "posts#index"
-  resources :sellcontents, only: [:index]
   root "products#index"
   resources :products
   resources :check, only: [:index]

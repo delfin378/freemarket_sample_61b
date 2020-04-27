@@ -42,8 +42,8 @@
     color: #fff;
     font-size: 12px;
     vertical-align: top;
-  }
-  textarea {
+   }
+  select#address_prefectures {
     width: 100%;
     margin: 8px 0 0;
     height: 48px;
@@ -56,14 +56,13 @@
    }
   }
 }
-button {
+input.address {
   margin: 40px 0 0 0;
   background: #ea352d;
   border: 1px solid #ea352d;
   color: #fff;
   display: block;
   width: 100%;
-  line-height: 48px;
   font-size: 14px;
 }
 input {

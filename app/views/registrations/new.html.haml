@@ -29,7 +29,7 @@
       %section.information-container
         %h2 会員情報入力
       .information-text
-      = form_for(@user, url: step2_registrations_path, method: :get) do |f|
+      = form_for(@user, url: new_phone_registrations_path, method: :get) do |f|
         .information-text__box
           .information-text__contents
             %label ニックネーム

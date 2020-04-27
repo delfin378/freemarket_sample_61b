@@ -39,32 +39,6 @@ ActiveRecord::Schema.define(version: 20200423104852) do
     t.datetime "updated_at",       null: false
   end
 
-  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "email",                                default: "", null: false
-    t.string   "encrypted_password",                   default: "", null: false
-    t.string   "password",                                          null: false
-    t.string   "nickname",                                          null: false
-    t.string   "family_name",                                       null: false
-    t.string   "first_name",                                        null: false
-    t.string   "family_name_kana",                                  null: false
-    t.string   "first_name_kana",                                   null: false
-    t.string   "phone_number",                                      null: false
-    t.integer  "birth_year",                                        null: false
-    t.integer  "birth_month",                                       null: false
-    t.integer  "birth_date",                                        null: false
-    t.text     "profile",                limit: 65535
-    t.text     "icon",                   limit: 65535
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.datetime "created_at",                                        null: false
-    t.datetime "updated_at",                                        null: false
-    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
-  end
-
-ActiveRecord::Schema.define(version: 20200311090008) do
-
   create_table "images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "src",        null: false
     t.integer  "product_id", null: false
@@ -88,6 +62,30 @@ ActiveRecord::Schema.define(version: 20200311090008) do
     t.datetime "updated_at",                                    null: false
     t.index ["name"], name: "index_products_on_name", using: :btree
     t.index ["price"], name: "index_products_on_price", using: :btree
+  end
+
+  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "email",                                default: "", null: false
+    t.string   "encrypted_password",                   default: "", null: false
+    t.string   "password",                                          null: false
+    t.string   "nickname",                                          null: false
+    t.string   "family_name",                                       null: false
+    t.string   "first_name",                                        null: false
+    t.string   "family_name_kana",                                  null: false
+    t.string   "first_name_kana",                                   null: false
+    t.string   "phone_number",                                      null: false
+    t.integer  "birth_year",                                        null: false
+    t.integer  "birth_month",                                       null: false
+    t.integer  "birth_date",                                        null: false
+    t.text     "profile",                limit: 65535
+    t.text     "icon",                   limit: 65535
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at",                                        null: false
+    t.datetime "updated_at",                                        null: false
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
   add_foreign_key "images", "products"

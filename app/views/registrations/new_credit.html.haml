@@ -29,7 +29,7 @@
       %section.payment-container
         %h2 クレジットカード情報入力
       .payment-text
-      = form_for(@card, url: step5_registrations_path, method: :post) do |f|
+      = form_for(@card, url: complete_registrations_path, method: :post) do |f|
         .payment-text__box
           .payment-text__contents
             %label カード番号
