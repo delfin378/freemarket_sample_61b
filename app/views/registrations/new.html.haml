@@ -68,19 +68,14 @@
             %label 生年月日
             %span.required 必須
             .birthday-select
-              = f.select :birth_year,User.birth_years.keys,prompt:{start_year:2020, end_year:1900}, class: "select"
-              %span 年
-              = f.select :birth_month,User.birth_months.keys,prompt:{start_month:1, end_month:12}, class: "select"
-              %span 月
-              = f.select :birth_date,User.birth_dates.keys,prompt:{start_date:1, end_date:31}, class: "select"
-              %span 日
+              != sprintf(f.date_select(:birthday, use_month_numbers: true,start_year: 1900, end_year: (Time.now.year), default: Date.new(1989, 1, 1),date_separator:'%s'),'年','月')+'日'
             %p ※本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
           .information-next
             .next-text
             %p 「次へ進む」のボタンを押すことにより、
             %a 利用規約
             %p に同意したものとみなします
-            = f.submit "次へ進む", class: 'btn btn-warning'
+            = f.submit "次へ進む", class: 'btn information'
           .information-registration
             %p 本人情報の登録について  
             = icon('fas', 'chevron-right')

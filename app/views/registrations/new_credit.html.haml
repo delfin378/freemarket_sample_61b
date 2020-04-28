@@ -47,21 +47,16 @@
             %label 有効期限
             %span.required 必須
             .expiration-date
-              .select-month
-                = f.select :expiration_month,Card.expiration_months,prompt:{start_month:1, end_month:12}, class: "select"
-                %span 月
-              .select-year
-                = f.select :expiration_year,Card.expiration_years,prompt:{start_year:20, end_year:30}, class: "select"
-                %span 年
+            != sprintf(f.date_select(:expiration_date,with_css_classes:'XXXXX', order:[:month,:year,:day], use_month_numbers:true, discard_day:true, start_year:Time.now.year-2000, end_year:Time.now.year-2000+10, date_separator:'%s'),'月') + '年'
           .payment-text__contents
             %label セキュリティコード
             %span 必須
             %textarea.textarea-default{name: "introduction",placeholder: "カード裏面4桁もしくは3桁の番号"}
-          .payment-text__numver
+          .payment-text__number
             .text
               = icon('fas','question-circle')
               %span カード裏面の番号とは？
-          = f.submit "次へ進む", class: 'btn btn-warning'
+          = f.submit "次へ進む", class: 'btn credit'
   .footer-registration-box 
     %ul.footer-registration-box-content
       %li.footer-registration-box-content__list

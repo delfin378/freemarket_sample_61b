@@ -30,13 +30,12 @@ ActiveRecord::Schema.define(version: 20200423104852) do
   end
 
   create_table "cards", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "user_id",          null: false
-    t.integer  "card_number",      null: false
-    t.integer  "expiration_month", null: false
-    t.integer  "expiration_year",  null: false
-    t.integer  "securitycord",     null: false
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.integer  "user_id",         null: false
+    t.integer  "card_number",     null: false
+    t.integer  "expiration_date", null: false
+    t.integer  "securitycord",    null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -74,9 +73,7 @@ ActiveRecord::Schema.define(version: 20200423104852) do
     t.string   "family_name_kana",                                  null: false
     t.string   "first_name_kana",                                   null: false
     t.string   "phone_number",                                      null: false
-    t.integer  "birth_year",                                        null: false
-    t.integer  "birth_month",                                       null: false
-    t.integer  "birth_date",                                        null: false
+    t.date     "birthday",                                          null: false
     t.text     "profile",                limit: 65535
     t.text     "icon",                   limit: 65535
     t.string   "reset_password_token"

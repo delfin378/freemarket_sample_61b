@@ -10,9 +10,7 @@
 |first_name|string|null: false|
 |family_name_kana|string|null: false|
 |first_name_kana|string|null: false|
-|birth_year|integer|null: false|
-|birth_month|integer|null: false|
-|birth_date|integer|null: false|
+|birthday|integer|null: false|
 |phone_number|string|null: false| 
 |profile|text|null: true|
 |icon|text||
@@ -49,8 +47,7 @@
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |card_number|integer|null: false, foreign_key: true|
-|expiration_month|integer|null: false| 
-|expiration_year|integer|null: false| 
+|expiration_date|integer|null: false| 
 |securitycord|integer|null: false| 
 
 ### Association
