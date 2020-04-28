@@ -1,0 +1,79 @@
+.registration-screen
+  .header-address
+    %h1 
+      =image_tag "fmarket_logo.png",size: '125x36',alt:"fmarket"
+    %nav.registration-box
+      %ul.registration-procedure
+        %li.information-user
+          会員情報
+          .information-progress-status
+            .information-progress-status__bar
+        %li.phone
+          電話番号認証
+          .phone-progress-status
+          .phone-progress-status__bar
+        %li.address
+          住所入力
+          .address-progress-status
+            .address-progress-status__bar
+        %li.payment
+          支払い方法
+          .payment-progress-status
+          .payment-progress-status__bar
+        %li.complete
+          完了
+          .complete-progress-status
+          .complete-progress-status__bar
+  .address-box
+    .address-main
+      %section.address-container
+        %h2 住所入力
+      .address-text
+      = form_for(@address, url: new_credit_registrations_path, method: :get) do |f|
+        .address-text__box
+          .address-text__contents
+            %label お名前
+            %span 必須
+            = f.text_field :family_name, placeholder: '例) 神田'
+            = f.text_field :first_name, placeholder: '例) 綾'
+          .address-text__contents
+            %label お名前（カナ）
+            %span 必須
+            = f.text_field :family_name_kana, placeholder: '例) カンダ'
+            = f.text_field :first_name_kana, placeholder: '例) アヤ'
+          .address-text__contents
+            %label 郵便番号
+            %span 必須
+            = f.text_field :postal_code, placeholder: '例) 123-4567'
+          .address-text__contents
+            %label 都道府県
+            %span 必須
+            = f.collection_select :prefectures, Prefecture.all, :id, :name
+          .address-text__contents
+            %label 市区町村
+            %span 必須
+            = f.text_field :municipalities, placeholder: '例) 横浜市緑区'
+          .address-text__contents
+            .form
+            %label 番地
+            %span 必須
+            = f.text_field :house_number, placeholder: '例) 青山1-1-1'
+          .address-text__contents
+            %label 建物名
+            %span 必須
+            = f.text_field :building_name, placeholder: '例) 柳ビル103'
+          .address-text__contents
+            %label 電話
+            %span 必須
+            = f.text_field :house_phone_number, placeholder: '例) 09012345678'
+          = f.submit "次へ進む", class: 'address'
+  .footer-registration-box 
+    %ul.footer-registration-box-content
+      %li.footer-registration-box-content__list
+        %a プライバシーポリシー
+      %li.footer-registration-box-content__list
+        %a メルカリ利用規約
+      %li.footer-registration-box-content__list
+        %a 特定商取引に関する表記
+    .footer-registration-box-content__icon
+      =image_tag "fmarket_logo_white.png",alt:"fmarket"

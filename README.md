@@ -27,14 +27,16 @@
 |Column|Type|Options|
 |------|----|-------|
 |user_id|references|null: false, foreing_key:true|
-|name|string|null: false| 
-|name_kana|string|null: false| 
-|postal_code|integer|null: false|
-|prefectures|string|null: false|
-|municipalities|string|null: false|
-|house_number|string|null: false|
-|building_name|string|null: true|
-|phone_number|integer|null: false|
+|family_name|string|null: false|
+|first_name|string|null: false|
+|family_name_kana|string|null: false|
+|first_name_kana|string|null: false|
+|postal_code(郵便番号)|integer|null: false|
+|prefectures(都道府県)|string|null: false|
+|municipalities(市区町村)|string|null: false|
+|house_number(番地)|string|null: false|
+|building_name(建物名)|string|null: true|
+|house_phone_number(家の電話番号)|integer|null: false|
 
 ### Association
 - has_many :transactions, dependent: :destroy

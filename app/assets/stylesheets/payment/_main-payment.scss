@@ -19,7 +19,7 @@
     max-width: 343px;
     margin: 0 auto;
   }
-  &__numver {
+  &__number {
     position: relative;
     margin: 8px 0 0;
   }
@@ -117,11 +117,11 @@
   .expiration-date {
     display: flex;
   }
-  .select-month {
+  select#card_expiration_date_2i.month {
     margin: 8px 0 0;
     width: calc(50% - 2px);
   }
-  .select-year {
+  select#card_expiration_date_1i.year {
     margin: 8px 0 0;
     width: calc(50% - 2px);
   }
@@ -140,7 +140,7 @@
     span {
       margin: 20px 0 0;
     }
-  button {
+  input.btn.credit {
     margin: 24px 0 0;
     background: #ea352d;
     border: 1px solid #ea352d;
