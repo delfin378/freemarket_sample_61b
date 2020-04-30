@@ -36,7 +36,7 @@
     border-radius: 50%;
     background: #ea352d;
     right: 50%;
-    &__bar {
+    &__bar11 {
       background: #ea352d;
       position: absolute;
       bottom: 5px;
@@ -63,15 +63,15 @@
     background: #ccc;
     border-radius: 50%;
     background: #ea352d;
-    &__bar {
+    &__bar12 {
       position: absolute;
       bottom: 5px;
       z-index: -1;
       display: block;
       content: '';
-      width: 0%;
       height: 2px;
       background: #ccc;
+      right: 50%;
     }
   }
 }
@@ -89,15 +89,16 @@
     margin: 8px auto 0;
     border-radius: 50%;
     background: #ea352d;
-    &__bar {
+    &__bar13 {
       position: absolute;
       bottom: 5px;
       z-index: -1;
       display: block;
       content: '';
-      left: -135%;
+      width: 172%;
       height: 2px;
       background: #ea352d;
+      right: 50%;
     }
   }
 }
@@ -115,15 +116,16 @@
     margin: 8px auto 0;
     border-radius: 50%;
     background: #ccc;
-    &__bar {
+    &__bar14 {
       position: absolute;
       bottom: 5px;
       z-index: -1;
       display: block;
       content: '';
-      left: -111%;
+      width: 162%;
       height: 2px;
       background: #ea352d;
+      right: 50%;
      }
   }
 }
@@ -139,15 +141,16 @@
     margin: 8px auto 0;
     border-radius: 50%;
     background: #ccc;
-    &__bar {
+    &__bar15 {
       position: absolute;
       bottom: 5px;
       z-index: -1;
       display: block;
       content: '';
-      width: 164%;
+      width: 163%;
       height: 2px;
       background: #ccc;
+      right: 50%;
     }
   }
 }
