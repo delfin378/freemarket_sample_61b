@@ -10,7 +10,7 @@
 |first_name|string|null: false|
 |family_name_kana|string|null: false|
 |first_name_kana|string|null: false|
-|birthday|integer|null: false|
+|birthday|date|null: false|
 |phone_number|string|null: false| 
 |profile|text|null: true|
 |icon|text||
@@ -26,11 +26,7 @@
 ## addressテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|references|null: false, foreing_key:true|
-|family_name|string|null: false|
-|first_name|string|null: false|
-|family_name_kana|string|null: false|
-|first_name_kana|string|null: false|
+|user_id|references|optional: true|
 |postal_code(郵便番号)|integer|null: false|
 |prefectures(都道府県)|string|null: false|
 |municipalities(市区町村)|string|null: false|
@@ -45,9 +41,9 @@
 ## cardsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
+|user_id|integer|optional: true|
 |card_number|integer|null: false, foreign_key: true|
-|expiration_date|integer|null: false| 
+|expiration_date|date|null: false| 
 |securitycord|integer|null: false| 
 
 ### Association

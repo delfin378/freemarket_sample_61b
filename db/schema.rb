@@ -13,11 +13,7 @@
 ActiveRecord::Schema.define(version: 20200423104852) do
 
   create_table "addresses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "user_id_id",         null: false
-    t.string   "family_name",        null: false
-    t.string   "first_name",         null: false
-    t.string   "family_name_kana",   null: false
-    t.string   "first_name_kana",    null: false
+    t.integer  "user_id"
     t.string   "postal_code",        null: false
     t.string   "prefectures",        null: false
     t.string   "municipalities",     null: false
@@ -26,13 +22,13 @@ ActiveRecord::Schema.define(version: 20200423104852) do
     t.string   "house_phone_number", null: false
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
-    t.index ["user_id_id"], name: "index_addresses_on_user_id_id", using: :btree
+    t.index ["user_id"], name: "index_addresses_on_user_id", using: :btree
   end
 
   create_table "cards", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "user_id",         null: false
+    t.integer  "user_id"
     t.integer  "card_number",     null: false
-    t.integer  "expiration_date", null: false
+    t.date     "expiration_date", null: false
     t.integer  "securitycord",    null: false
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
