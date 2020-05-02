@@ -53,8 +53,9 @@
             =@product.price
           .price-form--tax
             (税込)送料込み
+        
         .item-buy-btn
-          購入画面に進む
+          = link_to "購入画面に進む",purchase_product_path,class:"item-buy-btn-check"
         .item-check
           この商品はゆうゆうフリマ便を利用しているため、アプリからのみ購入できます。
         .item-text
@@ -75,7 +76,7 @@
         相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
       %textarea.textarea-default{name:"body",type:"text",value:""}
       %button.gray-btn{type:"submit"}
-        コメントする
+        コメントできません
 
 = render "shared/edit"
 = render "shared/delete"

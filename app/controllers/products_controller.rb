@@ -18,6 +18,10 @@ class ProductsController < ApplicationController
     end
   end
 
+  def purchase
+  
+  end
+
   def edit
   end
 

@@ -1,0 +1,12 @@
+.product-page
+  .fmarket_logo
+    =image_tag "#{"fmarket_logo.png"}",size: '185x55',alt:"fmarket"
+    .purchasedform
+      .purchasedform--word
+        購入が完了しました。
+      .purchasedform--myproduct
+        = link_to '商品ページに戻る',product_path(@product.id),class:"purchased-btn"
+      .purchasedform--return
+        = link_to 'トップページに戻る',root_path,class:"purchased-btn"
+  .fmarket_logo
+    =image_tag "fmarket_logo_white.png",size: '185x55',alt:"fmarket"

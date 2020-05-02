@@ -1,0 +1,64 @@
+.confirm-screen
+  = form_tag(action: :purchased, method: :post) do
+    .confirm-header
+      .confirm-header-box
+      %h1.confirm-header-box__icon
+        =image_tag "fmarket_logo.png",size: '125x36',alt:"fmarket"
+    .confirm-box
+      .confirm-main
+        %section.confirm-main-box
+          %h2 購入内容の確認
+        %section.confirm-product-box
+          .confirm-product-box__contents
+            .confirm-product-box__content
+              - @product.images.each do |image|
+                = image_tag image.src.url, class:"productimage"
+            .confirm-product-box-detail
+              .confirm-product-box-detail__name
+                =@product.name
+              .confirm-product-box-detail__tax
+                ¥
+                =@product.price
+        %section.confirm-product-main
+          .confirm-product-main__container
+            %form.confirm-product-main__detail
+              %ul.product-price
+                %li.product-price__table
+                  .product-price__payment
+                    支払い金額
+                  .product-price__number
+                    ¥
+                    =@product.price
+              %ul.product-price-point
+                %li.product-price-point__use
+                  .product-price-point__number
+                    = icon('fas', 'square')
+                    %lavel ポイントを使用（所持ポイント:P0)
+              %section.product-payment
+            .product-payment__box
+              %h2 支払い方法
+              %p
+                %i= icon('fas', 'plus-circle')
+                %text 登録してください
+          %section.product-address
+            .product-address-box
+              .product-address-box-text
+                %h2 配送先
+                %a 変更する
+              .product-address-box-info
+                %p 〒000-0000
+                %p 都道府県
+                %p 名前
+          .product-purchase
+            = submit_tag("購入する", class:"purchase-btn")
+
+    .footer-confirm-box 
+      %ul.footer-confirm-box-content
+        %li.footer-confirm-box-content__list
+          %a プライバシーポリシー
+        %li.footer-confirm-box-content__list
+          %a 利用規約
+        %li.footer-confirm-box-content__list
+          %a 特定商取引に関する表記
+      .footer-confirm-box-content__icon
+        =image_tag "fmarket_logo_white.png",alt:"fmarket"
