@@ -10,7 +10,14 @@ Rails.application.routes.draw do
     end
   end
   root "products#index"
-  resources :products
+  resources :products do
+    member do
+      get 'purchase'
+      post 'purchased'
+      get 'purchased'
+    end
+  end
+
   resources :check, only: [:index]
   resources :profile, only: [:index]
   resources :mypage, only: [:index]

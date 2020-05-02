@@ -1,0 +1,46 @@
+.purchasedform{
+  width: 700px;
+  height: 560px;
+  margin:  0 auto;
+  position: relative;
+  background-color: white;
+  margin-top: 20px;
+  font-weight: 600;
+  &--word{
+    font-size: 45px;
+    font-weight: 600;
+    padding-top: 50px;
+    text-align: center;
+  }
+  &--myproduct{
+    margin-top: 100px;
+    margin-left: 60px;
+    font-size: 25px;
+    width: 80%;
+    text-align: center;
+    color: white;
+    height: 60px;
+    background-color: lightblue;
+    border-radius: 4px;
+    padding-top: 12px;
+    .purchased-btn{
+      text-decoration: none;
+      color: white;
+    }
+  }
+  &--return{
+    margin-top: 100px;
+    margin-left: 60px;
+    font-size: 25px;
+    width: 80%;
+    text-align: center;
+    height: 60px;
+    background-color: red;
+    border-radius: 4px;
+    padding-top: 12px;
+    .purchased-btn{
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
