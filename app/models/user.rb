@@ -9,5 +9,5 @@ class User < ApplicationRecord
   has_one :address, dependent: :destroy
   has_many :likes, dependent: :destroy
   has_many :user_transactions, dependent: :destroy
-  validates :password ,:nickname ,:family_name ,:first_name ,:family_name_kana ,:first_name_kana ,:phone_number ,:profile ,:icon ,:birthday ,presence: true
+  validates :nickname ,:family_name ,:first_name ,:family_name_kana ,:first_name_kana ,:phone_number ,presence: true
 end

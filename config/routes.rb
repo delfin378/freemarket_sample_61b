@@ -25,5 +25,4 @@ Rails.application.routes.draw do
   resources :confirm, only: [:index]
   resources :productiondetail, only: [:index]
   resources :logout, only: [:index]
-  resources :registrations, only: [:new, :index, :create]
 end
