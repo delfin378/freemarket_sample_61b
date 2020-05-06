@@ -39,7 +39,7 @@ class RegistrationsController < ApplicationController
     session["expiration_date(1i)"] = params["expiration_date(1i)"]
     session["expiration_date(2i)"] = params["expiration_date(2i)"]
     session[:securitycord] = card_params[:securitycord]
-    @user = User.create(nickname: session[:nickname], email: session[:email], password: session[:password], family_name: session[:family_name], first_name: session[:first_name], family_name_kana: session[:family_name_kana], first_name_kana: session[:first_name_kana], birthday: session[:birthday], phone_number: session[:phone_number])
+    @user = User.create(nickname: session[:nickname], email: session[:email], family_name: session[:family_name], first_name: session[:first_name], family_name_kana: session[:family_name_kana], first_name_kana: session[:first_name_kana], birthday: session[:birthday], phone_number: session[:phone_number])
     @address = Address.create(postal_code: session[:postal_code], prefectures: session[:prefectures], municipalities: session[:municipalities], house_number: session[:house_number], building_name: session[:building_name], house_phone_number: session[:house_phone_number])
     @card = Card.create(card_number: session[:card_number], expiration_date: session[:expiration_date], securitycord: session[:securitycord])
     if @user.save
@@ -58,20 +58,16 @@ class RegistrationsController < ApplicationController
       :nickname,
       :email,
       :password, 
-      :password_confirmation, 
       :family_name,
       :first_name,
       :family_name_kana,
       :first_name_kana,
       :phone_number,
       :birthday,
-      :profile,
-      :icon
     )
   end 
   def address_params
     params.require(:address).permit(
-      :user_id,
       :postal_code,
       :prefectures,
       :municipalities,
@@ -82,7 +78,6 @@ class RegistrationsController < ApplicationController
   end
   def card_params
     params.require(:card).permit(
-      :user_id,
       :card_number,
       :expiration_date,
       :securitycord,
