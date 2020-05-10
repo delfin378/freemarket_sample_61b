@@ -1,6 +1,6 @@
 = link_to product_path(product.id),class: "product_list" do
   %li.content
-    - product.images.each do |image|
+    - product.images.first(1).each do |image|
       = image_tag image.src.url, class:"productimage"
       .productbox-price ¥ #{product.price}
       .product-textform

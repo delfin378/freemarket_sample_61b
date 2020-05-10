@@ -3,7 +3,7 @@
     .fmarket_logo
       =image_tag "#{"fmarket_logo.png"}",size: '185x55',alt:"fmarket"
 
-    .sellcontents
+    .sellcontents2
       .sellcontents-pict
         .sellcontents-pict-form
           .sellcontents-pict-form--name
@@ -12,15 +12,17 @@
             必須
           .sellcontents-pict-form--upload
             最大4枚までアップロードできます
-          %label{class:"form-file"}
-            .form-contents
-              = f.fields_for :images do |i|
-                = i.file_field :src, class: "image", style: "display:none;", id: "file"
-                .fas.fa-camera
+          %label{class:"form-file2"}
+            #image-box-1
+              .item-num-0#image-box__container
                 .camera-text
-                  ドラッグアンドドロップ
-                .camera-text2
-                  またはクリックしてファイルをアップロード
+                  クリックしてファイルをアップロード
+                  .form-contents2
+                    = f.fields_for :images do |i|
+                      = image_tag i.object.src.url,size:"111x111",style: "display:none"
+                      = i.file_field :src, class: "image", type: 'file', id: "img-file", style: "display:none;"
+                      %label{for: "img-file"}
+          .sell-form__container__item
       .product-status
         .product-status-nameform
           .product-status-nameform--name
@@ -80,8 +82,6 @@
           .production-delivery-form--tab
             = f.select :arrival_days,Product.arrival_days.keys, prompt: "選択してください", class: "select"
       .production-price
-        .production-price-header
-          価格（¥300〜9,999,999）
         .production-price--black
           販売価格
         .production-price--hissu
@@ -89,18 +89,9 @@
         .production-price--mark
           ¥
           = f.number_field :price ,class: "price-form"
-        
-        .production-price-commision
-          販売手数料（10%）
-          .production-price-commision--charge
-            ¥
-        .production-price-profit
-          販売利益     
-          .production-price-profit--charge
-            ¥
       .decideform
         = f.submit "編集する", class:'red-btn'
-        = link_to "もどる", :back, class: 'gray-btn'
+        = link_to "前の画面に戻る", :back, class: 'gray-btn'
         .decideform-alert
           禁止されている行為および出品物を必ずご確認ください。偽ブランド品や盗品物などの販売は犯罪であり、法律により処罰される可能性があります。 また、出品をもちまして加盟店規約に同意したことになります。
     .fmarket_logo
