@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   root "products#index"
   resources :products do
     member do
+      post 'edit'
       get 'purchase'
       post 'purchased'
       get 'purchased'

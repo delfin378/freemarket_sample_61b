@@ -8,9 +8,20 @@
         .product-name
           =@product.name
         .product-contents
-          - @product.images.each do |image|
-            = image_tag image.src.url, class:"product-image"
+          = image_tag (@product.images[0].src.url), class:"product-image"
           .product-contents--collection
+            - if @product.images[1].present?
+              =image_tag (@product.images[1].src.url),class:"product-image2"
+            - else
+              
+            - if @product.images[2].present?
+              =image_tag (@product.images[2].src.url),class:"product-image2"
+            - else
+              
+            - if @product.images[3].present?
+              =image_tag (@product.images[3].src.url),class:"product-image2"
+            - else
+              
         .product-infomation
           .info-contents
             .info-name

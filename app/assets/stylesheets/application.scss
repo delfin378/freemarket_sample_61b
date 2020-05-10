@@ -26,6 +26,9 @@
 //商品詳細ページ
 @import "products/show";
 
+//商品編集（写真）ページ
+@import "products/edit_picture";
+
 //user-credit,mypage,profile,checkのscss関連
 //画面全体に当てるもの
 @import "user-box/_container.scss";

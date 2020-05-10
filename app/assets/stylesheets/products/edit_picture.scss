@@ -11,9 +11,9 @@
 }
 
 
-.sellcontents{
+.sellcontents2{
   width: 700px;
-  height: 1970px;
+  height: 2050px;
   margin:  0 auto;
   position: relative;
   background-color: white;
@@ -45,15 +45,22 @@
       &--upload{
         margin-top: 10px;
       }
-      .form-file{
+      .form-file2{
         width: 600px;
-        height: 175px;
+        height: 240px;
         display: inline-block;
         margin: 16px auto 0;
         background-color: lightslategray;
         #image-box-1 {
           .camera-text{
             padding-top: 10px;
+          }
+          .form-contents2{
+            width: 600px;
+            height: 240px;
+            .item-image__operetion{
+              display: inline-block;
+            }
           }
           .item-image{
             display: inline-block;
@@ -77,9 +84,6 @@
             width: 4px;
             display: inline-block;
           }
-          .text-form2{
-            width: 140px;
-          }
         }
      }
     }
@@ -90,7 +94,7 @@
       width: 620px;
       height: 120px;
       margin:  0 auto;
-      top: 30px;
+      margin-top: 80px;
       &--name{
         font-weight: 600;
         line-height: 1.4em;

@@ -40,13 +40,21 @@
         margin-left: 20px;
         float: left;  
         .product-image{
-          width: 340px;
-          height: 400px;
+          width: 250px;
+          height: 310px;
         }
         &--collection{
-          width: 330px;
-          height:60px;
+          width: 340px;
+          height: 170px;
           background-color: lightblue;
+          .product-image2{
+            width: 100px;
+            height: 160px;
+          }
+          .product-image3{
+            width: 100px;
+            height: 160px;
+          }
           }
         }
       .product-infomation{
@@ -96,6 +104,8 @@
           font-size: 24px;
           line-height: 60px;
           background-color: red;
+          width: 80%;
+          margin: 0 auto;
           color: white;
           margin-top: 30px;
           text-align: center;

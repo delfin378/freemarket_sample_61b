@@ -7,14 +7,17 @@ class ProductsController < ApplicationController
   def new
     @product = Product.new
     @product.images.new
+
   end
 
   def create
     @product = Product.new(product_params)
     if @product.save
       redirect_to root_path
+      #flash.now[:alert] = "商品出品に成功しました"
     else
       redirect_to new_product_path
+      #flash.now[:alert] = "商品出品に失敗しました"
     end
   end
 

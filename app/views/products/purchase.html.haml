@@ -11,8 +11,7 @@
         %section.confirm-product-box
           .confirm-product-box__contents
             .confirm-product-box__content
-              - @product.images.each do |image|
-                = image_tag image.src.url, class:"productimage"
+              = image_tag (@product.images[0].src.url), class:"productimage"
             .confirm-product-box-detail
               .confirm-product-box-detail__name
                 =@product.name
