@@ -91,7 +91,7 @@
           = f.number_field :price ,class: "price-form"
       .decideform
         = f.submit "編集する", class:'red-btn'
-        = link_to "前の画面に戻る", :back, class: 'gray-btn'
+        = link_to '商品ページに戻る',product_path(@product.id), class: 'gray-btn'
         .decideform-alert
           禁止されている行為および出品物を必ずご確認ください。偽ブランド品や盗品物などの販売は犯罪であり、法律により処罰される可能性があります。 また、出品をもちまして加盟店規約に同意したことになります。
     .fmarket_logo

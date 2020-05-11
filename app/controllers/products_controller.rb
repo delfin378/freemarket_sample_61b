@@ -13,11 +13,10 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
     if @product.save
-      redirect_to root_path
-      #flash.now[:alert] = "商品出品に成功しました"
+      redirect_to root_path ,notice:"商品出品に成功しました"
     else
+      flash[:alert] = "商品出品に失敗しました"
       redirect_to new_product_path
-      #flash.now[:alert] = "商品出品に失敗しました"
     end
   end
 
@@ -33,6 +32,7 @@ class ProductsController < ApplicationController
 
   def update
     if @product.update(product_params)
+      flash.now[:notice] = "商品情報を変更しました"
       render :show
     else
       render :edit
