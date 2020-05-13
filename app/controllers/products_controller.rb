@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   before_action :set_product, except: [:index, :new, :create]
   def index
-    @products = Product.includes(:images).order('created_at DESC')
+    @products = Product.includes(:images).order('created_at DESC').limit(20)
   end
 
   def new
@@ -15,7 +15,7 @@ class ProductsController < ApplicationController
     if @product.save
       redirect_to root_path ,notice:"商品出品に成功しました"
     else
-      flash[:alert] = "商品出品に失敗しました"
+      flash[:alert] = "入力情報を確認してください"
       redirect_to new_product_path
     end
   end
