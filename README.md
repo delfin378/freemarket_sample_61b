@@ -11,17 +11,35 @@
 |family_name_kana|string|null: false|
 |first_name_kana|string|null: false|
 |birthday|date|null: false|
-|phone_number|string|null: false| 
-|profile|text|null: true|
-|icon|text||
 
 ### Association 
 - has_many :items, dependent: :destroy
 - has_many :comments, dependent: :destroy
 - has_many :cards, dependent: :destroy
 - has_one :address, dependent: :destroy
+- has_one :phone, dependent: :destroy
+- has_one :profile, dependent: :destroy
 - has_many :likes, dependent: :destroy
 - has_many :user-transactions, dependent: :destroy
+
+## phoneテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|references|optional: true|
+|phone_number|string|null: false|
+
+### Association
+- belongs_to : user
+
+## profileテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|references|optional: true|
+|profile|text|null: true|
+|icon|text||
+
+### Association
+- belongs_to : user
 
 ## addressテーブル
 |Column|Type|Options|
@@ -41,10 +59,10 @@
 ## cardsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|optional: true|
-|card_number|integer|null: false, foreign_key: true|
+|user_id|references|optional: true|
+|card_number|string|null: false, foreign_key: true|
 |expiration_date|date|null: false| 
-|securitycord|integer|null: false| 
+|securitycord|string|null: false| 
 
 ### Association
 - belongs_to : user

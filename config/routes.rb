@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :registrations do
     collection do
+      get 'signup' #新規会員登録
       get 'new' #会員情報入力
       get 'new_phone' #電話番号認証
       get 'new_address' #住所入力
