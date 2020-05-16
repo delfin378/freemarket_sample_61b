@@ -1,0 +1,27 @@
+.signup-screen
+  .signup-header
+    .signup-header-box
+    %h1.signup-header-box__icon
+      =image_tag "fmarket_logo.png",size: '125x36',alt:"fmarket"
+  .signup-box
+    .signup-main
+      %section.signup-main__header
+        %h2 新規会員登録
+      .signup-main__box
+        .signup-main__form
+          = link_to "メールアドレスで登録する", new_registration_path, class: 'mailaddress'
+          %i= icon('far','envelope')
+          %button.Facebook{type:"submit"} Facebookで登録する
+          %i= icon('fab', 'facebook-square')
+          %button.Google{type:"submit"} Googleで登録する
+          %i= icon('fab', 'google')
+  .footer-registration-box 
+    %ul.footer-registration-box-content
+      %li.footer-registration-box-content__list
+        %a プライバシーポリシー
+      %li.footer-registration-box-content__list
+        %a フリマアプリ利用規約
+      %li.footer-registration-box-content__list
+        %a 特定商取引に関する表記
+    .footer-registration-box-content__icon
+      =image_tag "fmarket_logo_white.png",alt:"fmarket"

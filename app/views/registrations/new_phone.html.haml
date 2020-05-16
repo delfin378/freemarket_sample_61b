@@ -33,8 +33,8 @@
           .phone-box-content__number
           %label 携帯電話の番号
           .phone-number
-          = form_for(@user, url: new_address_registrations_path, method: :get) do |f|
-            = f.text_field :phone_number
+          = form_for(@phone, url: new_address_registrations_path, method: :get) do |f|
+            = f.text_field :phone_number, placeholder: '携帯電話の番号を入力'
             %p 本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
             = f.submit "次へ進む", class: 'btn phone'
           %p ※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。

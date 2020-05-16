@@ -51,7 +51,7 @@
           .payment-text__contents
             %label セキュリティコード
             %span 必須
-            %textarea.textarea-default{name: "introduction",placeholder: "カード裏面4桁もしくは3桁の番号"}
+            = f.text_field :securitycord, placeholder: 'カード裏面4桁もしくは3桁の番号'
           .payment-text__number
             .text
               = icon('fas','question-circle')

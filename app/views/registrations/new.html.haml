@@ -38,11 +38,11 @@
           .information-text__contents
             %label メールアドレス
             %span 必須
-            = f.email_field :email, autofocus: true, autocomplete: "email"
+            = f.email_field :email, placeholder: 'PC・携帯どちらでも可'
           .information-text__contents
-            %label パスワード
+            %label パスワード  
             %span 必須
-            = f.password_field :password, autocomplete: "new-password"
+            = f.password_field :password, placeholder: '6文字以上'
             %p ※英字と数字の両方を含めて設定してください
             .password
               %input.password{type:"checkbox"}
@@ -68,7 +68,7 @@
             %label 生年月日
             %span.required 必須
             .birthday-select
-              != sprintf(f.date_select(:birthday, prompt:"--", use_month_numbers: true, start_year: 1900, end_year: (Time.now.year), default: Date.new(1989, 1, 1),date_separator:'%s'),'年','月')+'日'
+              != sprintf(f.date_select(:birthday,{ start_year: Date.today.year, end_year: Date.today.year-120,prompt:"--", use_month_numbers: true, with_css_classes: true,discard_minute:true,date_separator: '%s', datetime_separator: '%s'}, {required: true}), '<div class="input-field-multiple__separate-text">年</div>', '<div class="input-field-multiple__separate-text">月</div>') +'<div class="input-field-multiple__separate-text">日</div>'
             %p ※本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
           .information-next
             .next-text
