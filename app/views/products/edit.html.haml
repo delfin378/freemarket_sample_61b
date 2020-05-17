@@ -11,21 +11,28 @@
           .sellcontents-pict-form--hissu
             必須
           .sellcontents-pict-form--upload
-            最大2枚までアップロードできます
-          %label{class:"form-file"}
-            クリックして画像をアップロード
-            .dropzone-container
-              #image-box
-                #previews
-                  - if @product.persisted?
-                    - @product.images.each_with_index do |image, i|
-                      = image_tag image.src.url, data: { index: i }, width: "100", height: '100'
-                = f.fields_for :images do |image|
-                  .js-file_group{"data-index" => "#{image.index}"}
-                    = image.file_field :src, class: 'js-file'
-                  .js-remove 削除
-                  - if @product.persisted?
-                    = image.check_box :_destroy, data:{ index: image.index }, class: 'hidden-destroy'
+            最大4枚までアップロードできます
+          .sell-form__post__drop__box__container
+            .prev-content
+              - @product.images.each do |image|
+                .preview-box
+                  .upper-box
+                    = image_tag image.src.url, width: "112", height: "112", alt: "preview"
+                  .lower-box
+                    .delete-box
+                      .delete-btn
+                        %span 削除
+                        
+            .label-content
+              = f.label :"images_attributes_#{@product.images.length}_src", class:"label-box", id: "label-box--#{@product.images.length}" do
+                %pre.label-box__text-visible クリックしてファイルをアップロード
+            .hidden-content
+              =f.fields_for :images do |i|
+                =i.file_field :src, class: "hidden-field"
+                =i.check_box:_destroy, class: "hidden-checkbox"
+
+              - @product.images.length.upto(4) do |i|
+                %input{name: "product[images_attributes][#{i}][src]", id: "product_images_attributes_#{i}_src", class: "hidden-field", type:"file"}
       .product-status
         .product-status-nameform
           .product-status-nameform--name

@@ -13,17 +13,17 @@
 
 .sellcontents{
   width: 700px;
-  height: 2170px;
+  height: 1950px;
   margin:  0 auto;
   position: relative;
   background-color: white;
   margin-top: 20px;
   .sellcontents-pict{
-    height: 450px;
+    height: 340px;
     .sellcontents-pict-form{
       position: relative;
-      width: 600px;
-      height: 220px;
+      width: 630px;
+      height: 180px;
       margin:  0 auto;
       top: 40px;
       &--name{
@@ -44,48 +44,84 @@
       &--upload{
         margin-top: 10px;
       }
-      .form-file{
-        width: 600px;
-        height: 220px;
-        display: inline-block;
-        background-color: lightslategray;
-        .dropzone-container{
-          display: flex;
-          #preview{
-            display: flex;
-            .img_view {
-              height: 162px;
+    // image投稿欄のCSS
+    .sell-form__post__drop__box__container{
+      display: block;
+      margin: 16px auto 0;
+      display: flex;
+      flex-wrap: wrap;
+    
+      //プレビュー表示欄のCSS
+      .prev-content {
+        display: flex;
+        .preview-box {
+          height: 162px;
+          width: 112px;
+          margin: 0 15px 10px 0;
+          .upper-box {
+            height: 112px;
+            width: 100%;
+            img{
               width: 112px;
-              margin: 0 15px 10px 0;
-              .js-file{
-                display: none;
-              }
-                img{
-                  width: 112px;
-                  height: 112px;
-                }
-              }
-          } 
-        }
-        #image-box {
-          .js-remove{
-            width: 140px;
-          }
-          .js-file_group{
-            .js-file{
-            display: inline-block;
-            }
-            .js-remove{
-              display: inline-block;
-              width: 140px;
-            }
-            .hidden-destroy{
-              display: none;
+              height: 112px;
             }
           }
-          
+          .lower-box {
+            text-align: center;
+
+            .delete-box {
+              color: #00b0ff;
+              width: 100%;
+              height: 50px;
+              line-height: 50px;
+              border: 1px solid #eee;
+              background: #f5f5f5;
+              cursor: pointer;
+            }
+          }
         }
-     }
+      }
+    
+      //投稿クリックエリアのCSS
+      .label-content{
+        margin-bottom: 10px;
+        width: 620px;
+        .label-box {
+          display: block;
+          border: 1px dashed #ccc;
+          position: relative;
+          background: #f5f5f5;
+          width: 100%;
+          height: 162px;
+          cursor: pointer;
+          &__text-visible {
+            position: absolute;
+            top: 50%;
+            left: 16px;
+            right: 16px;
+            text-align: center;
+            font-size: 14px;
+            line-height: 1.5;
+            font-weight: bold;
+            -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+            pointer-events: none;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+          }
+        }
+      }
+    
+      //file_fieldのcss
+      .hidden-content {
+        .hidden-field {
+          display: none;
+        }
+        .hidden-checkbox {
+          display: none;
+        }
+      }
+    }
     }
   }
   .product-status{
@@ -94,7 +130,7 @@
       width: 620px;
       height: 120px;
       margin:  0 auto;
-      top: 30px;
+
       &--name{
         font-weight: 600;
         line-height: 1.4em;
