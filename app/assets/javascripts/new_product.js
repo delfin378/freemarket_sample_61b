@@ -84,7 +84,7 @@ $(document).on('turbolinks:load', function(){
         $(`#preview-box__${id} img`).attr('src', `${image}`);
         var count = $('.preview-box').length;
         //プレビューが5個あったらラベルを隠す
-        if (count == 5) {
+        if (count == 4) {
           $('.label-content').hide();
         }
 
