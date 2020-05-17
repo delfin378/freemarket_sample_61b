@@ -34,8 +34,8 @@ $(document).on('turbolinks:load', function(){
         $(box).attr('id', `delete_btn_${index}`);
       })
       var count = $('.preview-box').length;
-      //プレビューが5あるときは、投稿ボックスを消しておく
-      if (count == 5) {
+      //プレビューが4あるときは、投稿ボックスを消しておく
+      if (count == 4) {
         $('.label-content').hide();
       }
     }
@@ -96,7 +96,7 @@ $(document).on('turbolinks:load', function(){
 
         setLabel();
         //ラベルのidとforの値を変更
-        if(count < 5){
+        if(count < 4){
           //プレビューの数でラベルのオプションを更新する
           $('.label-box').attr({id: `label-box--${count}`,for: `product_images_attributes_${count}_src`});
         }
@@ -121,12 +121,12 @@ $(document).on('turbolinks:load', function(){
         $(`#product_images_attributes_${id}_src`).val("");
         //削除時のラベル操作
         var count = $('.preview-box').length;
-        //5個目が消されたらラベルを表示
-        if (count == 4) {
+        //4個目が消されたらラベルを表示
+        if (count == 3) {
           $('.label-content').show();
         }
         setLabel(count);
-        if(id < 5){
+        if(id < 4){
           //削除された際に、空っぽになったfile_fieldをもう一度入力可能にする 
           $('.label-box').attr({id: `label-box--${id}`, for: `product_images_attributes_${id}_src`});
         }
@@ -134,8 +134,8 @@ $(document).on('turbolinks:load', function(){
 
         //投稿編集時
         $(`#product_images_attributes_${id}__destroy`).prop('checked',true);
-        //5個目が消されたらラベルを表示
-        if (count == 4) {
+        //4個目が消されたらラベルを表示
+        if (count == 3) {
           $('.label-content').show();
         }
 
@@ -143,7 +143,7 @@ $(document).on('turbolinks:load', function(){
         setLabel();
         //ラベルのidとforの値を変更
         //削除したプレビューのidによって、ラベルのidを変更する
-        if(id < 5){
+        if(id < 4){
           $('.label-box').attr({id: `label-box--${id}`,for: `product_images_attributes_${id}_src`});
         }
       }
