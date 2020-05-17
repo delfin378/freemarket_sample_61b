@@ -13,7 +13,7 @@
 |birthday|date|null: false|
 
 ### Association 
-- has_many :items, dependent: :destroy
+- has_many :products, dependent: :destroy
 - has_many :comments, dependent: :destroy
 - has_many :cards, dependent: :destroy
 - has_one :address, dependent: :destroy
@@ -68,7 +68,7 @@
 - belongs_to : user
 
 
-## itemsテーブル
+## productsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |seller_id|integer|null: false, foreign_key: true|
@@ -96,7 +96,7 @@
 |image|string|null: false|
 
 ### Association
-- belong_to :item
+- belong_to :product
 
 ## commentsテーブル
 |Column|Type|Options|
@@ -107,7 +107,7 @@
 
 ### Association
 - belongs_to :user
-- belongs_to :item
+- belongs_to :product
 
 ## likesテーブル
 |Column|Type|Options|

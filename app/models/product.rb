@@ -3,6 +3,7 @@ class Product < ApplicationRecord
   has_many :images, dependent: :destroy
   accepts_nested_attributes_for :images, allow_destroy: true
   validates :name,:product_explanation, presence: true
+  belongs_to :user, optional: true
   
   enum category:{"レディース":1,"メンズ":2,"キッズ":3,"インテリア・小物":4,"おもちゃ・ホビー":5,"香水・美容":6,"家電・スマホ":7,"スポーツ・レジャー":8,"ハンドメイト":9,"自転車・バイク":10,"その他":11}
   enum product_situations:{"新品、未使用":1,"未使用に近い":2,"目立った傷や汚れなし":3,"やや傷や汚れあり":4,"傷や汚れあり":5,"全体的に状態が悪い":6}
