@@ -13,17 +13,16 @@
 
 .sellcontents{
   width: 700px;
-  height: 1970px;
+  height: 2170px;
   margin:  0 auto;
   position: relative;
   background-color: white;
   margin-top: 20px;
   .sellcontents-pict{
-    height: 340px;
-    
+    height: 450px;
     .sellcontents-pict-form{
       position: relative;
-      width: 620px;
+      width: 600px;
       height: 220px;
       margin:  0 auto;
       top: 40px;
@@ -47,39 +46,44 @@
       }
       .form-file{
         width: 600px;
-        height: 175px;
+        height: 220px;
         display: inline-block;
-        margin: 16px auto 0;
         background-color: lightslategray;
-        #image-box-1 {
-          .camera-text{
-            padding-top: 10px;
-          }
-          .item-image{
-            display: inline-block;
-          }
-          .item-num-0{
-            width: 100%;
-          }
-          .item-num-1{
-            width: 451px;
-            display: inline-block;
-          }
-          .item-num-2{
-            width: 302px;
-            display: inline-block;
-          }
-          .item-num-3{
-            width: 153px;
-            display: inline-block;
-          }
-          .item-num-4{
-            width: 4px;
-            display: inline-block;
-          }
-          .text-form2{
+        .dropzone-container{
+          display: flex;
+          #preview{
+            display: flex;
+            .img_view {
+              height: 162px;
+              width: 112px;
+              margin: 0 15px 10px 0;
+              .js-file{
+                display: none;
+              }
+                img{
+                  width: 112px;
+                  height: 112px;
+                }
+              }
+          } 
+        }
+        #image-box {
+          .js-remove{
             width: 140px;
           }
+          .js-file_group{
+            .js-file{
+            display: inline-block;
+            }
+            .js-remove{
+              display: inline-block;
+              width: 140px;
+            }
+            .hidden-destroy{
+              display: none;
+            }
+          }
+          
         }
      }
     }

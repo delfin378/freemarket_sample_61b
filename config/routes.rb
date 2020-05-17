@@ -13,8 +13,8 @@ Rails.application.routes.draw do
   root "products#index"
   resources :products do
     member do
-      post 'edit'
       get 'purchase'
+      post 'pay'
       post 'purchased'
       get 'purchased'
     end

@@ -45,45 +45,15 @@
       &--upload{
         margin-top: 10px;
       }
-      .form-file2{
+      .form-file{
         width: 600px;
         height: 240px;
         display: inline-block;
         margin: 16px auto 0;
         background-color: lightslategray;
-        #image-box-1 {
-          .camera-text{
-            padding-top: 10px;
-          }
-          .form-contents2{
-            width: 600px;
-            height: 240px;
-            .item-image__operetion{
-              display: inline-block;
-            }
-          }
-          .item-image{
-            display: inline-block;
-          }
-          .item-num-0{
-            width: 100%;
-          }
-          .item-num-1{
-            width: 451px;
-            display: inline-block;
-          }
-          .item-num-2{
-            width: 302px;
-            display: inline-block;
-          }
-          .item-num-3{
-            width: 153px;
-            display: inline-block;
-          }
-          .item-num-4{
-            width: 4px;
-            display: inline-block;
-          }
+        }
+        .hidden-destroy{
+          display: none;
         }
      }
     }
@@ -330,7 +300,7 @@
       color: gray;
     }
   }
-}
+
 
 .content{
   display: inline-block;
