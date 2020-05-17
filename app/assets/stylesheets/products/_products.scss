@@ -13,17 +13,16 @@
 
 .sellcontents{
   width: 700px;
-  height: 1970px;
+  height: 2170px;
   margin:  0 auto;
   position: relative;
   background-color: white;
   margin-top: 20px;
   .sellcontents-pict{
-    height: 340px;
-    
+    height: 450px;
     .sellcontents-pict-form{
       position: relative;
-      width: 620px;
+      width: 600px;
       height: 220px;
       margin:  0 auto;
       top: 40px;
@@ -47,21 +46,41 @@
       }
       .form-file{
         width: 600px;
-        height: 190px;
+        height: 220px;
         display: inline-block;
-        margin: 16px auto 0;
         background-color: lightslategray;
+        .dropzone-container{
+          display: flex;
+          #preview{
+            display: flex;
+            .img_view {
+              height: 162px;
+              width: 112px;
+              margin: 0 15px 10px 0;
+              .js-file{
+                display: none;
+              }
+                img{
+                  width: 112px;
+                  height: 112px;
+                }
+              }
+          } 
+        }
         #image-box {
           .js-remove{
             width: 140px;
           }
           .js-file_group{
             .js-file{
-            
+            display: inline-block;
             }
             .js-remove{
               display: inline-block;
               width: 140px;
+            }
+            .hidden-destroy{
+              display: none;
             }
           }
           
