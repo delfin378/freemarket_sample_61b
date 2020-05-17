@@ -1,2 +1,7 @@
 //右下のカメラアイコン
-= link_to '出品', new_product_path,class:"camera"
+.camera
+  // - if user_signed_in?
+  = link_to '出品', new_product_path
+  //- else
+  //= link_to '出品', new_product_path
+  //= link_to '出品', signup_registrations_path

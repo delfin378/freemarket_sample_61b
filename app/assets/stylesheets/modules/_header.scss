@@ -73,7 +73,7 @@
       margin-right: 3px;
     }
     .good-list{
-      margin-left: 170px;
+      margin-left: 50px;
     }
     .fa-bell{
       color: gray;
@@ -95,6 +95,14 @@
     }
     .mypage-list{
       margin-left:30px;
+      .login_url{
+        text-decoration: none;
+        color: gray;
+      }
+      .signup_url{
+        text-decoration: none;
+        color: gray;
+      }
     }
   }
 }
