@@ -1,0 +1,28 @@
+.login-screen
+  .login-header
+    .login-header-box
+    %h1.login-header-box__icon
+      =image_tag "fmarket_logo.png",size: '125x36',alt:"fmarket"
+  .login-box
+    .login-main
+      .login-main__box
+        %p アカウントをお持ちでない方はこちら
+        = link_to "新規会員登録",signup_registrations_path,class:"buttonlogin"
+      .login-main__form
+        %button.Facebook{type:"submit"} Facebookでログイン
+        .facebook
+          %i= icon('fab', 'facebook-square')
+        %button.Google{type:"submit"} Googleでログイン
+        .Google
+          %i= icon('fab', 'google')
+      .login-main-container
+        .login-main-container__action
+          .login-main-container__input
+            = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+              = f.text_field :email,class: "login_mailaddress_form",placeholder: "メールアドレス"
+              = f.password_field :password, class: "login_password_form", autocomplete: "current-password", placeholder: "パスワード"
+              .login-main-container-authentication
+                = f.submit'ログイン', class: "login_button"
+              .password
+                %p パスワードをお忘れの方
+    = render "registration/footer-registration"

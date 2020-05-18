@@ -24,7 +24,11 @@
         %i.fas.fa-check
         やることリスト
       .mypage-list
-        %i.fas.fa-user-circle
-          = link_to "ログイン", login_index_path,class:"login_url"
-        %i.fas.fa-user-circle
-          = link_to "新規登録", signup_registrations_path,class: "signup_url"
+        - if user_signed_in?
+          = link_to logout_index_path do
+            %i{class: "fas fa-smile"}
+              ログアウト
+        - else
+          = link_to new_user_session_path do
+            %i{class: "fas fa-smile"}
+              ログイン/新規会員登録

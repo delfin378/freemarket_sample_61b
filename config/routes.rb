@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: {
+    registrations: 'users/registrations',
+  }
   resources :registrations do
     collection do
       get 'signup' #新規会員登録
@@ -19,6 +21,7 @@ Rails.application.routes.draw do
       get 'purchased'
     end
   end
+  resources :users, only: :show
 
   resources :check, only: [:index]
   resources :profile, only: [:index]

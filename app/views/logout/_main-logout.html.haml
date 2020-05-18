@@ -2,4 +2,5 @@
   .logout-box
     %form.logtout
       .logput-button
-        %button.purchase{type:"submit"} ログアウト
+        = link_to destroy_user_session_path, method: :delete do
+          = button_tag "ログアウト", class: "logout_submit_button", type: "submit"

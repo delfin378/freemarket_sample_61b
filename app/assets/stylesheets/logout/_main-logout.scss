@@ -13,14 +13,13 @@
 .logput-button {
   max-width: 320px;
   margin: 0 auto;
-  button {
+  text-decoration: none;
+  .logout_submit_button {
     margin: 0;
     background: #ea352d;
-    border: 1px solid #ea352d;
     color: #fff;
-    display: block;
     width: 100%;
-    line-height: 48px;
-    font-size: 14px;
+    font-size: 18px;
+    
   }
 }
