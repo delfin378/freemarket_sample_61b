@@ -1,2 +1,3 @@
-= link_to '編集', edit_product_path,class:"editor"
+- if @product.user_id == current_user.id
+  = link_to '編集', edit_product_path,class:"editor"
   
