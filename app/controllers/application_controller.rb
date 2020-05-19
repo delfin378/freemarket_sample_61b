@@ -2,11 +2,16 @@ class ApplicationController < ActionController::Base
   before_action :basic_auth, if: :production?
   before_action :configure_permitted_parameters, if: :devise_controller?
   protect_from_forgery with: :exception
+  before_action :set_current_user
 
   private
 
   def production?
     Rails.env.production?
+  end
+
+  def set_current_user
+    @current_user = User.find_by(id: session[:user_id])
   end
 
 
