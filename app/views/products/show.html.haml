@@ -27,7 +27,7 @@
             .info-name
               出品者
             .info-text
-              テスト
+              = User.find(@product.user_id).nickname
           .info-contents
             .info-name
               カテゴリー

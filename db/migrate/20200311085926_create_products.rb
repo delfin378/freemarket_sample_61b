@@ -5,12 +5,13 @@ class CreateProducts < ActiveRecord::Migration[5.0]
       t.integer  :price,              index: true
       t.text     :product_explanation,null:false
       t.integer  :trade_status, default: 0
-      t.integer  :category           
-      t.text     :brand
-      t.string   :product_situation  
-      t.integer  :shipping_charges   
-      t.integer  :shipping_origin    
-      t.integer  :arrival_days       
+      t.integer  :category           , null: false
+      t.text     :brand              , null: false
+      t.string   :product_situation  , null: false
+      t.integer  :shipping_charges   , null: false
+      t.integer  :shipping_origin    , null: false
+      t.integer  :arrival_days       , null: false
+      t.references :user         , null: false
       t.timestamps
     end
   end

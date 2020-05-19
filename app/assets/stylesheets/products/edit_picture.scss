@@ -236,16 +236,18 @@
     }
   }
   .production-delivery{
-    height: 450px;
+    height: 470px;
     padding-top: 60px;
     .production-delivery-form{
       width: 620px;
       height: 380px;
       margin:  0 auto;
       background-color: white;
+
       &--exp{
         font-weight: 600;
         line-height: 1.4em;
+        padding-top: 30px;
         padding-bottom: 25px;
         color: gray;
         display: block;
