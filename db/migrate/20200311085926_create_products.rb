@@ -12,7 +12,6 @@ class CreateProducts < ActiveRecord::Migration[5.0]
       t.integer  :shipping_origin    , null: false
       t.integer  :arrival_days       , null: false
       t.references :user         , optional: true
-
       t.timestamps
     end
   end
