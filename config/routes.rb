@@ -16,9 +16,8 @@ Rails.application.routes.draw do
   resources :products do
     member do
       get 'purchase'
+      post'purchase'
       post 'pay'
-      post 'purchased'
-      get 'purchased'
     end
   end
   resources :users, only: :show

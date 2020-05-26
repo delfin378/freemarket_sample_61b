@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
-  before_action :set_product, except: [:index, :new, :create]
+  before_action :set_product, except: [:index, :new, :create, :pay]
+
   def index
     @products = Product.includes(:images).order('created_at DESC').limit(20)
   end
@@ -22,6 +23,15 @@ class ProductsController < ApplicationController
 
   def purchase
   
+  end
+
+  def pay
+    Payjp.api_key = ENV["PAYJP_SECRET_KEY"]
+      charge =Payjp::Charge.create(
+      amount: @product.price,
+      card: params['payjp-token'],
+      currency: 'jpy'
+    )
   end
 
   def edit

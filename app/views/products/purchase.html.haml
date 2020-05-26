@@ -1,5 +1,5 @@
 .confirm-screen
-  = form_tag(action: :purchased, method: :post) do
+  = form_tag local: true, url: products_path do |f|
     .confirm-header
       .confirm-header-box
       %h1.confirm-header-box__icon
@@ -43,14 +43,13 @@
             .product-address-box
               .product-address-box-text
                 %h2 配送先
-                %a 変更する
               .product-address-box-info
                 %p 〒000-0000
                 %p 都道府県
                 %p 名前
           .product-purchase
-            = submit_tag("購入する", class:"purchase-btn")
-
+            %script.payjp-button{"data-key":"#{ENV["PAYJP_PUBLIC_KEY"]}",src:"https://checkout.pay.jp",type:"text/javascript"}
+              :cdata
     .footer-confirm-box 
       %ul.footer-confirm-box-content
         %li.footer-confirm-box-content__list

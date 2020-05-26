@@ -19,3 +19,6 @@
 
 public/uploads/*
 config/secrets.yml
+
+PAYJP_SECRET_KEY='sk_test_7fa3b628064f1e18681693bf'
+PAYJP_PUBLIC_KEY='pk_test_fe63a9d675fba31924799f7e'
