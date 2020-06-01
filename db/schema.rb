@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200513153210) do
+ActiveRecord::Schema.define(version: 20200523142429) do
 
   create_table "addresses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "user_id"
@@ -56,18 +56,25 @@ ActiveRecord::Schema.define(version: 20200513153210) do
     t.integer  "price"
     t.text     "product_explanation", limit: 65535,             null: false
     t.integer  "trade_status",                      default: 0
-    t.integer  "category",                                      null: false
-    t.text     "brand",               limit: 65535,             null: false
-    t.string   "product_situation",                             null: false
-    t.integer  "shipping_charges",                              null: false
-    t.integer  "shipping_origin",                               null: false
-    t.integer  "arrival_days",                                  null: false
-    t.integer  "user_id",                                       null: false
+    t.integer  "category"
+    t.text     "brand",               limit: 65535
+    t.string   "product_situation"
+    t.integer  "shipping_charges"
+    t.integer  "shipping_origin"
+    t.integer  "arrival_days"
     t.datetime "created_at",                                    null: false
     t.datetime "updated_at",                                    null: false
     t.index ["name"], name: "index_products_on_name", using: :btree
     t.index ["price"], name: "index_products_on_price", using: :btree
-    t.index ["user_id"], name: "index_products_on_user_id", using: :btree
+  end
+
+  create_table "sns_credentials", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "provider"
+    t.string   "uid"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_sns_credentials_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -89,4 +96,5 @@ ActiveRecord::Schema.define(version: 20200513153210) do
   end
 
   add_foreign_key "images", "products"
+  add_foreign_key "sns_credentials", "users"
 end

@@ -11,9 +11,9 @@
         .signup-main__form
           = link_to "メールアドレスで登録する", new_registration_path, class: 'mailaddress'
           %i= icon('far','envelope')
-          %button.Facebook{type:"submit"} Facebookで登録する
+          = link_to 'Facebookで登録する', user_facebook_omniauth_authorize_path, method: :post
           %i= icon('fab', 'facebook-square')
-          %button.Google{type:"submit"} Googleで登録する
+          = link_to 'Googleで登録する', user_google_oauth2_omniauth_authorize_path, method: :post
           %i= icon('fab', 'google')
   .footer-registration-box 
     %ul.footer-registration-box-content

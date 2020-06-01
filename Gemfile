@@ -72,6 +72,9 @@ gem 'mini_magick'
 gem 'fog-aws'
 gem 'active_hash'
 gem 'payjp'
+gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
+gem "omniauth-rails_csrf_protection"
 
 group :production do
   gem 'unicorn', '5.4.1'

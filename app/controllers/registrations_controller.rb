@@ -39,6 +39,7 @@ class RegistrationsController < ApplicationController
     @phone = Phone.create(phone_number: session[:phone_number])
     @address = Address.create(postal_code: session[:postal_code], prefectures: session[:prefectures], municipalities: session[:municipalities], house_number: session[:house_number], building_name: session[:building_name], house_phone_number: session[:house_phone_number])
     @card = Card.create(card_number: session[:card_number], securitycord: session[:securitycord], expiration_date: session[:expiration_date])
+    sns = SnsCredential.create(user_id: @user.id,uid: session[:uid], provider: session[:provider])
     if @user.save
        @phone.save
        @address.save
