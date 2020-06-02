@@ -14,15 +14,18 @@
       .search-brand
         %i.fas.fa-tag
         ブランドから探す
-      .good-list
-        %i.far.fa-heart
-        いいね！一覧
       .known-list
         %i.far.fa-bell
         お知らせ
       .play-list
-        %i.fas.fa-check
-        やることリスト
+        - if user_signed_in?
+          = link_to new_card_path do
+            %i{class: "fas fa-check"}
+              クレジットカード登録/変更
+        - else
+          = link_to new_user_session_path do
+            %i{class: "fas fa-check"}
+              クレジットカード登録/変更
       .mypage-list
         - if user_signed_in?
           = link_to logout_index_path do

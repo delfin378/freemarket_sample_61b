@@ -1,6 +1,7 @@
 .payment-main {
-  width: 700px;
+  width: 650px;
   margin: 0 auto;
+  height: 620px;
   background: #fff;
 }
 .payment-container {
@@ -16,7 +17,7 @@
   padding: 24px 16px 40px;
   border-top: 1px solid #f5f5f5;
   &__box {
-    max-width: 343px;
+    max-width: 350px;
     margin: 0 auto;
   }
   &__number {
@@ -92,7 +93,7 @@
    }
   }
 }
-.payment-expiration-date {
+.payment-expiration_date {
   margin: 24px 0 0;
   label {
     font-weight: 600;
@@ -114,16 +115,19 @@
       font-weight: 600;
     }
   }
-  .expiration-date {
+  .expiration_date {
     display: flex;
-  }
-  select#card_expiration_date_2i.month {
-    margin: 8px 0 0;
-    width: calc(40% - 2px);
-  }
-  select#card_expiration_date_1i.year {
-    margin: 8px 0 0;
-    width: calc(40% - 2px);
+    .month_select {
+      margin: 10px 10px 0;
+      width: calc(40% - 1px);
+    }
+    .setting {
+      padding-top: 20px;
+    }
+    .year_select {
+      margin: 10px 10px 0;
+      width: calc(40% - 1px);
+    }
   }
   select {
     width: calc(100% - 38px);
@@ -141,7 +145,6 @@
       margin: 20px 0 0;
     }
   input.btn.credit {
-    margin: 24px 0 0;
     background: #ea352d;
     border: 1px solid #ea352d;
     color: #fff;

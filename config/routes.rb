@@ -8,7 +8,6 @@ Rails.application.routes.draw do
       get 'new' #会員情報入力
       get 'new_phone' #電話番号認証
       get 'new_address' #住所入力
-      get 'new_credit' #クレジットカード追加
       post 'complete' #登録完了
     end
   end
@@ -20,12 +19,16 @@ Rails.application.routes.draw do
       post 'pay'
     end
   end
+
+  resources :cards, only: [:create,:new, :show,:destroy] 
+
+
+
   resources :users, only: :show
 
   resources :check, only: [:index]
   resources :profile, only: [:index]
   resources :mypage, only: [:index]
-  resources :credit, only: [:index]
   resources :confirm, only: [:index]
   resources :productiondetail, only: [:index]
   resources :logout, only: [:index]
