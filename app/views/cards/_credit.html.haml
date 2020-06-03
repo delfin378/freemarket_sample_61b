@@ -1,13 +1,12 @@
 %section.main-contents
   .pay
-    %h2 支払い方法
-    %section.credit-card
-      %h3 クレジットカード一覧
-      %section.credit-card__add_to
-        .credit-card__add_to__content
-          = icon('fas', 'credit-card')
-          %btn クレジットカードを追加する
-      .credit-card__pay
-        %a.credit-card__pay__method
-          %span 支払い方法について
-          = icon('fas', 'chevron-right')
+    %label 登録クレジットカード情報
+    %br
+    = "**** **** **** " + @default_card_information.last4
+    %br
+    - exp_month = @default_card_information.exp_month.to_s
+    - exp_year = @default_card_information.exp_year.to_s.slice(2,3)
+    = exp_month + " / " + exp_year
+    = form_tag(card_path(current_user.id), method: :delete, id: 'charge-form') do
+      %input{ type: "hidden", name: "card_id", value: "" }
+      %button 削除する
