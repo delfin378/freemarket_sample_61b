@@ -11,12 +11,13 @@ Rails.application.routes.draw do
       post 'complete' #登録完了
     end
   end
+
   root "products#index"
   resources :products do
     member do
-      get 'purchase'
-      post'purchase'
-      post 'pay'
+      get  'purchase'
+      post 'purchase'
+      post 'complete'
     end
   end
 

@@ -44,9 +44,14 @@
               .product-address-box-text
                 %h2 配送先
               .product-address-box-info
-                %p 〒000-0000
-                %p 都道府県
-                %p 名前
+                〒
+                = current_user.address.postal_code
+                %p
+                = current_user.address.municipalities
+                %br
+                = current_user.family_name
+                = current_user.first_name
+
           .product-purchase
             %script.payjp-button{"data-key":"#{ENV["PAYJP_PUBLIC_KEY"]}",src:"https://checkout.pay.jp",type:"text/javascript"}
               :cdata

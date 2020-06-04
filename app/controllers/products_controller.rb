@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
-  before_action :set_product, except: [:index, :new, :create, :pay]
+  require 'payjp'
+  before_action :set_product, except: [:index, :new, :create]
 
   def index
     @products = Product.includes(:images).order('created_at DESC').limit(20)
@@ -21,14 +22,18 @@ class ProductsController < ApplicationController
     end
   end
 
-  def purchase
   
+
+  def purchase
+    @user = User.find(params[:id])
+    @address = current_user.address
   end
 
   def edit
   end
 
   def show
+    
   end
 
   def update
