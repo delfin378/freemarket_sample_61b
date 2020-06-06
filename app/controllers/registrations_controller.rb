@@ -30,7 +30,7 @@ class RegistrationsController < ApplicationController
     session[:house_phone_number] = params[:address][:house_phone_number]
     @user = User.create(nickname: session[:nickname], email: session[:email], password: session[:password], family_name: session[:family_name], first_name: session[:first_name], family_name_kana: session[:family_name_kana], first_name_kana: session[:first_name_kana], birthday: session[:birthday])
     @phone = Phone.create(phone_number: session[:phone_number])
-    @address = Address.create(postal_code: session[:postal_code], prefectures: session[:prefectures], municipalities: session[:municipalities], house_number: session[:house_number], building_name: session[:building_name], house_phone_number: session[:house_phone_number])
+    @address = Address.create(postal_code: session[:postal_code], prefectures: session[:prefectures], municipalities: session[:municipalities], house_number: session[:house_number], building_name: session[:building_name], house_phone_number: session[:house_phone_number],user_id: @user.id)
     if @user.save
        @phone.save
        @address.save

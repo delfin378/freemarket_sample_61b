@@ -16,22 +16,18 @@ Rails.application.routes.draw do
   resources :products do
     member do
       get  'purchase'
-      post 'purchase'
-      post 'complete'
+      post 'purchase', to: 'products#purchase'
+      post 'pay',to: 'products#pay'
+      get 'complete', to: 'products#complete'
     end
   end
 
   resources :cards, only: [:create,:new, :show,:destroy] 
-
-
-
   resources :users, only: :show
-
   resources :check, only: [:index]
   resources :profile, only: [:index]
   resources :mypage, only: [:index]
   resources :confirm, only: [:index]
-  resources :productiondetail, only: [:index]
   resources :logout, only: [:index]
   resources :login, only: [:index]
 end

@@ -22,11 +22,29 @@ class ProductsController < ApplicationController
     end
   end
 
-  
-
   def purchase
     @user = User.find(params[:id])
     @address = current_user.address
+    card = Card.where(user_id: current_user.id).first
+    if card.blank?
+      # 登録された情報がない場合にカード登録画面に移動
+      redirect_to new_card_path
+    else
+      Payjp.api_key = ENV["PAYJP_SECRET_KEY"]
+      customer = Payjp::Customer.retrieve(card.customer_id)
+      @default_card_information = customer.cards.retrieve(card.card_id)
+    end
+  end
+
+  def pay
+    card = Card.where(user_id: current_user.id).first
+    Payjp.api_key = ENV["PAYJP_SECRET_KEY"]
+    Payjp::Charge.create(
+      :amount => @product.price, #支払金額を入力
+      :customer => card.customer_id, #顧客ID
+      :currency => 'jpy', #日本円
+    )
+    redirect_to action: 'complete' #完了画面に移動
   end
 
   def edit
@@ -52,6 +70,8 @@ class ProductsController < ApplicationController
       render :show
     end
   end
+
+
 
   private
   def product_params
