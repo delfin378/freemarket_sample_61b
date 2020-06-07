@@ -29,7 +29,7 @@
       %section.address-container
         %h2 住所入力
       .address-text
-      = form_for(@address, url: new_credit_registrations_path, method: :get) do |f|
+      = form_for(@address, url: complete_registrations_path, method: :post) do |f|
         .address-text__box
           .address-text__contents
             %label 郵便番号
@@ -56,7 +56,7 @@
             %label 電話
             %span 必須
             = f.text_field :house_phone_number, placeholder: '例) 09012345678'
-          = f.submit "次へ進む", class: 'address'
+          = f.submit "次へ進む", class: 'address', url: "complete_registrations_path"
   .footer-registration-box 
     %ul.footer-registration-box-content
       %li.footer-registration-box-content__list

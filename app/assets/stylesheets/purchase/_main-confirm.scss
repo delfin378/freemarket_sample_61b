@@ -74,6 +74,7 @@
   &__container {
     margin: 0 auto;
     max-width: 343px;
+    margin-bottom: 30px;
   }
 }
 .product-price {
@@ -136,12 +137,14 @@
   p {
     color: #0099e8;
     text-decoration: none;
-    margin: 8px 0 0;
+    margin: 10px 0 0;
+    font-weight: bold;
    }
    text {
     line-height: 1.5;
     margin: 0 0 0 4px;
     font-size: 14px;
+    font-weight: bold;
    }
   }
 }

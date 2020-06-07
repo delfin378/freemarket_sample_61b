@@ -68,13 +68,6 @@
       margin-left: 20px;
       font-weight: 600;
     }
-    .fa-heart{
-      color: gray;
-      margin-right: 3px;
-    }
-    .good-list{
-      margin-left: 50px;
-    }
     .fa-bell{
       color: gray;
       margin-right: 3px;
@@ -82,16 +75,13 @@
     .known-list{
       margin-left:30px;
     }
-    .fa-check{
-      color: gray;
-      margin-right: 3px;
-    }
+    
     .play-list{
       margin-left:30px;
-    }
-    .fa-user-circle{
-      color: gray;
-      margin-right: 3px;
+      .fa-check{
+        color: gray;
+        text-decoration: none;
+      }
     }
     .mypage-list{
       margin-left:30px;

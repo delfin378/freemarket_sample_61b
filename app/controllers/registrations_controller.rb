@@ -21,32 +21,21 @@ class RegistrationsController < ApplicationController
     @address = Address.new
   end
 
-  def new_credit
+  def complete
     session[:postal_code] = params[:address][:postal_code]
     session[:prefectures] = params[:address][:prefectures]
     session[:municipalities] = params[:address][:municipalities]
     session[:house_number] = params[:address][:house_number]
     session[:building_name] = params[:address][:building_name]
     session[:house_phone_number] = params[:address][:house_phone_number]
-    @card = Card.new
-  end
-
-  def complete
-    session[:card_number] = params[:card][:card_number]
-    session[:expiration_date] = "20#{params[:card]['expiration_date(1i)']}/#{params[:card]['expiration_date(2i)']}/#{params[:card]['expiration_date(3i)']}"
-    session[:securitycord] = params[:card][:securitycord]
     @user = User.create(nickname: session[:nickname], email: session[:email], password: session[:password], family_name: session[:family_name], first_name: session[:first_name], family_name_kana: session[:family_name_kana], first_name_kana: session[:first_name_kana], birthday: session[:birthday])
     @phone = Phone.create(phone_number: session[:phone_number])
-    @address = Address.create(postal_code: session[:postal_code], prefectures: session[:prefectures], municipalities: session[:municipalities], house_number: session[:house_number], building_name: session[:building_name], house_phone_number: session[:house_phone_number])
-    @card = Card.create(card_number: session[:card_number], securitycord: session[:securitycord], expiration_date: session[:expiration_date])
-    sns = SnsCredential.create(user_id: @user.id,uid: session[:uid], provider: session[:provider])
+    @address = Address.create(postal_code: session[:postal_code], prefectures: session[:prefectures], municipalities: session[:municipalities], house_number: session[:house_number], building_name: session[:building_name], house_phone_number: session[:house_phone_number],user_id: @user.id)
     if @user.save
        @phone.save
        @address.save
-       @card.save
       session[:id] = @user.id
       session[:id] = @address.id
-      session[:id] = @card.id
     end
   end
 
@@ -82,16 +71,5 @@ class RegistrationsController < ApplicationController
       :house_phone_number,
     )
   end
-  def card_params
-    params.require(:card).permit(
-      :card_number,
-      :securitycord,
-      :expiration_date,
-    )
-    end
-    def expiration_date_join
-      date = params[:expiration_date]
-      Date.new date[:expiration_date1i].to_i,date[:expiration_date2i].to_i
-    end  
-  end
+end
 

@@ -42,6 +42,9 @@
 //商品編集（写真）ページ
 @import "products/edit_picture";
 
+//カード登録機能
+@import "card_registration/_card_registration";
+
 //user-credit,mypage,profile,checkのscss関連
 //画面全体に当てるもの
 @import "user-box/_container.scss";
@@ -50,17 +53,17 @@
 @import "user-box/_main-screen.scss";
 @import "user-box/_profile-box.scss";
 //ユーザーファイル各種
-@import "credit/_credit.scss";
+@import "cards/_card.scss";
 @import "mypage/_mypage.scss";
 @import "profile/_profile.scss";
 @import "check/_check.scss";
 //ユーザーheader-menu系
-@import "credit/_header-menu-credit.scss";
+@import "cards/_header-menu-credit.scss";
 @import "mypage/_header-menu-mypage.scss";
 @import "profile/_header-menu-profile.scss";
 @import "check/_header-menu-check.scss";
 //ユーザーleft_box系
-@import "credit/_left_box-credit.scss";
+@import "cards/_left_box-credit.scss";
 @import "mypage/_left_box-mypage.scss";
 @import "profile/_left_box-profile.scss";
 @import "check/_left_box-check.scss";
@@ -73,7 +76,6 @@
 @import "purchase/purchased";
 
 
-
 //ユーザー新規登録画面
 //共通
 @import "registration/_footer-registration";
@@ -82,7 +84,6 @@
 @import "information/_information-box";
 @import "phone/_phone-box";
 @import "address/_address-box";
-@import "payment/_payment-box";
 @import "complete/_complete-box";
 //会員情報入力
 @import "information/_main-information";
@@ -93,9 +94,7 @@
 //住所入力
 @import "address/_header-address";
 @import "address/_main-address";
-//お支払い方法
-@import "payment/_header-payment";
-@import "payment/_main-payment";
+
 //完了画面
 @import "complete/_header-complete";
 @import "complete/_main-complete";
