@@ -28,6 +28,7 @@ class ProductsController < ApplicationController
     card = Card.where(user_id: current_user.id).first
     if card.blank?
       # 登録された情報がない場合にカード登録画面に移動
+      flash[:alert] = '購入前にカード登録してください'
       redirect_to new_card_path
     else
       Payjp.api_key = ENV["PAYJP_SECRET_KEY"]
@@ -37,6 +38,7 @@ class ProductsController < ApplicationController
   end
 
   def pay
+    if
     card = Card.where(user_id: current_user.id).first
     Payjp.api_key = ENV["PAYJP_SECRET_KEY"]
     Payjp::Charge.create(
@@ -45,7 +47,18 @@ class ProductsController < ApplicationController
       :currency => 'jpy', #日本円
     )
     redirect_to action: 'complete' #完了画面に移動
+    else
+    flash.now[:alert] = '購入に失敗しました'
+    render :show
+    end
   end
+
+  def complete
+    @product_purchaser= Product.find(params[:id])
+    @product_purchaser.update( purchaser_id: current_user.id)
+  end
+
+
 
   def edit
   end

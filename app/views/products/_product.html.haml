@@ -1,5 +1,9 @@
 = link_to product_path(product.id),class: "product_list" do
   %li.content
+    -if product.purchaser_id.present? 
+      .items-box_photo__sold
+        .items-box_photo__sold__inner
+          SOLD
     - product.images.first(1).each do |image|
       = image_tag image.src.url, class:"productimage"
       .productbox-price ¥ #{product.price}

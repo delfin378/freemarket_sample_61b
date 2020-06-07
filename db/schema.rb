@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 20200521081833) do
     t.integer  "shipping_origin",                               null: false
     t.integer  "arrival_days",                                  null: false
     t.integer  "user_id"
+    t.integer  "purchaser_id"
     t.datetime "created_at",                                    null: false
     t.datetime "updated_at",                                    null: false
     t.index ["name"], name: "index_products_on_name", using: :btree

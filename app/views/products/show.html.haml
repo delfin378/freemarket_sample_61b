@@ -8,6 +8,10 @@
         .product-name
           =@product.name
         .product-contents
+          -if @product.purchaser_id.present? 
+            .product-image__sold
+              .product-image__sold__inner
+                SOLD
           = image_tag (@product.images[0].src.url), class:"product-image"
           .product-contents--collection
             - if @product.images[1].present?
@@ -21,7 +25,6 @@
             - if @product.images[3].present?
               =image_tag (@product.images[3].src.url),class:"product-image2"
             - else
-              
         .product-infomation
           .info-contents
             .info-name
@@ -64,9 +67,16 @@
             =@product.price
           .price-form--tax
             (税込)送料込み
-        
-        .item-buy-btn
-          = link_to "購入画面に進む",purchase_product_path,class:"item-buy-btn-check"
+        -if @product.purchaser_id.present? 
+          .item-bought-btn
+            売り切れました
+        -else
+          - if user_signed_in?
+            .item-buy-btn
+              = link_to "購入画面に進む",purchase_product_path,class:"item-buy-btn-check"
+          - else
+            .item-buy-btn
+              = link_to "購入画面に進む",new_user_session_path ,class:"item-buy-btn-check"
         .item-check
           この商品はゆうゆうフリマ便を利用しているため、アプリからのみ購入できます。
         .item-text
