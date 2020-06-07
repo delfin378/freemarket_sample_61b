@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   require 'payjp'
   before_action :set_product, except: [:index, :new, :create]
+  before_action :set_card, only:[:purchase]
 
   def index
     @products = Product.includes(:images).order('created_at DESC').limit(20)
@@ -9,7 +10,6 @@ class ProductsController < ApplicationController
   def new
     @product = Product.new
     @product.images.new
-
   end
 
   def create
@@ -25,26 +25,25 @@ class ProductsController < ApplicationController
   def purchase
     @user = User.find(params[:id])
     @address = current_user.address
-    card = Card.where(user_id: current_user.id).first
-    if card.blank?
+    if @card.blank?
       # 登録された情報がない場合にカード登録画面に移動
-      flash[:alert] = '購入前にカード登録してください'
+      flash[:alert] = '先にカード登録してください'
       redirect_to new_card_path
     else
       Payjp.api_key = ENV["PAYJP_SECRET_KEY"]
-      customer = Payjp::Customer.retrieve(card.customer_id)
-      @default_card_information = customer.cards.retrieve(card.card_id)
+      customer = Payjp::Customer.retrieve(@card.customer_id)
+      @default_card_information = customer.cards.retrieve(@card.card_id)
     end
   end
 
   def pay
-    if
     card = Card.where(user_id: current_user.id).first
+    if @card.blank?
     Payjp.api_key = ENV["PAYJP_SECRET_KEY"]
     Payjp::Charge.create(
-      :amount => @product.price, #支払金額を入力
-      :customer => card.customer_id, #顧客ID
-      :currency => 'jpy', #日本円
+      amount: @product.price, #支払金額を入力
+      customer: card.customer_id, #顧客ID
+      currency: 'jpy', #日本円
     )
     redirect_to action: 'complete' #完了画面に移動
     else
@@ -54,8 +53,12 @@ class ProductsController < ApplicationController
   end
 
   def complete
+    if @product.purchaser_id = "NULL"
     @product_purchaser= Product.find(params[:id])
     @product_purchaser.update( purchaser_id: current_user.id)
+    else
+      redirect_to root_path,notice:"既に購入した人がいます."
+    end
   end
 
 
@@ -95,4 +98,7 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
   end
 
+  def set_card
+    @card = Card.find_by(user_id: current_user.id)
+  end
 end
