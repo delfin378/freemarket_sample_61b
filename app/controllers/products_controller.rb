@@ -23,7 +23,6 @@ class ProductsController < ApplicationController
   end
 
   def purchase
-    @user = User.find(params[:id])
     @address = current_user.address
     if @card.blank?
       # 登録された情報がない場合にカード登録画面に移動
@@ -53,9 +52,12 @@ class ProductsController < ApplicationController
   end
 
   def complete
-    if @product.purchaser_id = "NULL"
-    @product_purchaser= Product.find(params[:id])
-    @product_purchaser.update( purchaser_id: current_user.id)
+    if @product.purchaser_id == nil
+      if @product.update(purchaser_id: current_user.id)
+        # @product_purchaser= Product.find(params[:purchaser_id])
+      else
+        render :show
+      end
     else
       redirect_to root_path,notice:"既に購入した人がいます."
     end
@@ -91,7 +93,7 @@ class ProductsController < ApplicationController
 
   private
   def product_params
-    params.require(:product).permit(:name, :price,:product_explanation,:category,:brand,:product_situation,:shipping_charges,:shipping_origin,:arrival_days, images_attributes: [:src, :_destroy, :id]).merge(user_id: current_user.id)
+    params.require(:product).permit(:name, :price,:product_explanation,:category,:brand,:product_situation,:shipping_charges,:shipping_origin,:arrival_days,:purchaser_id, images_attributes: [:src, :_destroy, :id]).merge(user_id: current_user.id)
   end
 
   def set_product
