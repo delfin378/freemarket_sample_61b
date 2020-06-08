@@ -1,8 +1,8 @@
 class CreateProducts < ActiveRecord::Migration[5.0]
   def change
     create_table :products do |t|
-      t.string   :name,               limit:40,index: true
-      t.integer  :price,              index: true
+      t.string   :name,               limit:40,index: true,null:false
+      t.integer  :price,              index: true,null:false
       t.text     :product_explanation,null:false
       t.integer  :trade_status, default: 0
       t.integer  :category           , null: false
