@@ -64,12 +64,9 @@
         発送元・お届け先住所変更
         = icon('fas', 'chevron-right')
       %li.left-box3__lists__list
-        支払い方法
-        - if user_signed_in?
-          = link_to new_card_path do
-        - else
-          = link_to new_user_session_path do
-        = icon('fas', 'chevron-right')
+        = link_to new_card_path do
+          支払い方法
+          = icon('fas', 'chevron-right')
       %li.left-box3__lists__list
         メール/パスワード
         = icon('fas', 'chevron-right')
