@@ -3,7 +3,7 @@
     .fmarket_logo
       =image_tag "#{"fmarket_logo.png"}",size: '185x55',alt:"fmarket"
 
-    .sellcontents2
+    .sellcontents
       .sellcontents-pict
         .sellcontents-pict-form
           .sellcontents-pict-form--name
@@ -91,7 +91,7 @@
             = f.select :arrival_days,Product.arrival_days.keys, prompt: "選択してください", class: "select"
       .production-price
         .production-price--black
-          販売価格
+          販売価格（¥300〜9,999,999）
         .production-price--hissu
           必須
         .production-price--mark
