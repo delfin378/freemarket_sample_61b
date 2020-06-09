@@ -71,8 +71,9 @@
         メール/パスワード
         = icon('fas', 'chevron-right')
       %li.left-box3__lists__list
-        本人情報
-        = icon('fas', 'chevron-right')
+        = link_to check_index_path do
+          本人情報
+          = icon('fas', 'chevron-right')
       %li.left-box3__lists__list
         電話番号の確認
         = icon('fas', 'chevron-right')
