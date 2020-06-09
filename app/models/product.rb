@@ -2,7 +2,9 @@ class Product < ApplicationRecord
   has_many :comments
   has_many :images, dependent: :destroy
   accepts_nested_attributes_for :images, allow_destroy: true
-  validates :name,:product_explanation, presence: true
+  validates :name, length: { in: 1..40 }, presence: true
+  validates :product_explanation, length: { in: 1..1000 }, presence: true
+  validates :price, presence: true, numericality: { only_integer: true,greater_than: 299, less_than: 10000000}
   belongs_to :user, optional: true
   
   enum category:{"レディース":1,"メンズ":2,"キッズ":3,"インテリア・小物":4,"おもちゃ・ホビー":5,"香水・美容":6,"家電・スマホ":7,"スポーツ・レジャー":8,"ハンドメイト":9,"自転車・バイク":10,"その他":11}
