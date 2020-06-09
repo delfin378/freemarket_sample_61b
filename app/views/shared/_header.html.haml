@@ -28,9 +28,9 @@
               クレジットカード登録/変更
       .mypage-list
         - if user_signed_in?
-          = link_to logout_index_path do
+          = link_to mypage_index_path do
             %i{class: "fas fa-smile"}
-              ログアウト
+              マイページ
         - else
           = link_to new_user_session_path do
             %i{class: "fas fa-smile"}

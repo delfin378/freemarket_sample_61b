@@ -57,8 +57,9 @@
       %li.left-box3__lists
         設定
       %li.left-box3__lists__list
-        プロフィール
-        = icon('fas', 'chevron-right')
+        = link_to profile_index_path do
+          プロフィール
+          = icon('fas', 'chevron-right')
       %li.left-box3__lists__list
         発送元・お届け先住所変更
         = icon('fas', 'chevron-right')
@@ -75,6 +76,7 @@
         電話番号の確認
         = icon('fas', 'chevron-right')
       %li.left-box3__lists__list
-        ログアウト
-        = icon('fas', 'chevron-right')
+        = link_to logout_index_path do
+          ログアウト
+          = icon('fas', 'chevron-right')
 
