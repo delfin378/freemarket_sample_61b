@@ -21,11 +21,11 @@
         - if user_signed_in?
           = link_to new_card_path do
             %i{class: "fas fa-check"}
-              クレジットカード登録
+              クレジットカード登録/削除
         - else
           = link_to new_user_session_path do
             %i{class: "fas fa-check"}
-              クレジットカード削除
+              クレジットカード登録/削除
       .mypage-list
         - if user_signed_in?
           = link_to mypage_index_path do
