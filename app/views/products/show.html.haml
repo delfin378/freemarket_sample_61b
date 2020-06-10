@@ -71,7 +71,7 @@
           .item-bought-btn
             売り切れました
         -else
-          -if @product_id = @current_user_id
+          -if @product.user_id == current_user.id
             .item-bought-btn
               出品中です。
           -else
