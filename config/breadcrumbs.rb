@@ -17,7 +17,7 @@ crumb :check do
 end
 
 crumb :logout do
-  link "本人情報の登録", logout_index_path
+  link "ログアウト", logout_index_path
   parent :mypage
 end
 

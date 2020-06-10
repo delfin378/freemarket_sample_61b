@@ -11,42 +11,11 @@
   padding: 16px 0;
   margin: 0 auto;
   color: #888;
-  &__title {
-    display: inline-block;
-    font-size: 14px;
-    line-height: 1.2;
+  
+}
+.breadcrumbs {
+  a {
+    text-decoration: none;
     color: #888;
-    a{
-      color: #888;
-    }
-    a:link{
-      text-decoration: none;
-      color: #888;
-    a:visited{
-      text-decoration: none;
-      color: #888;
-    i {
-      margin: 0 8px;
-      font-size: 9px;
-      color: #888;
-   }
-  }
-  &__mypage {
-    display: inline-block;
-    font-size: 14px;
-    line-height: 1.2;
-    i {
-      margin: 0 8px;
-      font-size: 9px;
-      color: #888;
-   }
-  }
-  &__mypage {
-    display: inline-block;
-    font-size: 14px;
-    line-height: 1.2;
-    font-weight: 600;
-      }
-    }
   }
 }
