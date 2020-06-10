@@ -67,20 +67,28 @@
             =@product.price
           .price-form--tax
             (税込)送料込み
-        -if @product.purchaser_id.present? 
-          .item-bought-btn
-            売り切れました
-        -else
-          -if @product.user_id == current_user.id
+        -if user_signed_in?
+          -if @product.purchaser_id.present? 
             .item-bought-btn
-              出品中です。
+              売り切れました
           -else
-            - if user_signed_in?
-              .item-buy-btn
-                = link_to "購入画面に進む",purchase_product_path,class:"item-buy-btn-check"
-            - else
-              .item-buy-btn
-                = link_to "購入画面に進む",new_user_session_path ,class:"item-buy-btn-check"
+            -if @product.user_id == current_user.id
+              .item-bought-btn
+                出品中です。
+            -else
+              - if user_signed_in?
+                .item-buy-btn
+                  = link_to "購入画面に進む",purchase_product_path,class:"item-buy-btn-check"
+              - else
+                .item-buy-btn
+                  = link_to "購入画面に進む",new_user_session_path ,class:"item-buy-btn-check"
+        -else 
+          -if @product.purchaser_id.present?
+            .item-bought-btn
+              売り切れました
+          -else
+          .item-buy-btn
+            = link_to "購入画面に進む",new_user_session_path ,class:"item-buy-btn-check"
         .item-check
           この商品はゆうゆうフリマ便を利用しているため、アプリからのみ購入できます。
         .item-text
