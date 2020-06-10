@@ -41,16 +41,6 @@
     background: #fff;
     line-height: 1.5;
     font-size: 16px;
-    .btn.phone {
-      margin: 24px 0 0;
-      background: #ea352d;
-      border: 1px solid #ea352d;
-      color: #fff;
-      display: block;
-      width: 100%;
-      line-height: 48px;
-      font-size: 14px;
-    }
   }
   p {
     margin: 8px 0 0;
@@ -68,4 +58,13 @@
   i {
     color: #0099e8;
   }
+}
+.btn.phone {
+  margin: 24px 0 0;
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  color: #fff;
+  display: block;
+  width: 100%;
+  font-size: 14px;
 }
