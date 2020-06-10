@@ -76,12 +76,8 @@
               .item-bought-btn
                 出品中です。
             -else
-              - if user_signed_in?
-                .item-buy-btn
-                  = link_to "購入画面に進む",purchase_product_path,class:"item-buy-btn-check"
-              - else
-                .item-buy-btn
-                  = link_to "購入画面に進む",new_user_session_path ,class:"item-buy-btn-check"
+              .item-buy-btn
+                = link_to "購入画面に進む",purchase_product_path,class:"item-buy-btn-check"
         -else 
           -if @product.purchaser_id.present?
             .item-bought-btn
