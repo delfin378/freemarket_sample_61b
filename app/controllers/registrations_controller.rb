@@ -1,4 +1,7 @@
 class RegistrationsController < ApplicationController
+  before_action :validates_new, only: :new_phone# newのバリデーション
+  before_action :validates_new_phone, only: :new_address # new_phoneのバリデーション
+  before_action :validates_new_address, only: :complete # new_addressのバリデーション
 
   def new
     @user = User.new
@@ -37,6 +40,55 @@ class RegistrationsController < ApplicationController
       session[:id] = @user.id
       session[:id] = @address.id
     end
+  end
+
+  def validates_new
+    session[:nickname] = params[:user][:nickname]
+    session[:email] = params[:user][:email]
+    session[:password] = params[:user][:password]
+    session[:family_name] = params[:user][:family_name]
+    session[:first_name] = params[:user][:first_name]
+    session[:family_name_kana] = params[:user][:family_name_kana]
+    session[:first_name_kana] = params[:user][:first_name_kana]
+    session[:birthday] = "#{params[:user]['birthday(1i)']}/#{params[:user]['birthday(2i)']}/#{params[:user]['birthday(3i)']}"
+    @user = User.new(
+      nickname: session[:nickname], 
+      email: session[:email],
+      password: session[:password],
+      family_name: session[:family_name],
+      first_name: session[:first_name],
+      first_name: session[:first_name],
+      family_name_kana: session[:family_name_kana], 
+      first_name_kana: session[:first_name_kana],
+      birthday: session[:birthday],
+    )
+    render '/registrations/new' unless @user.valid?
+  end
+
+  def validates_new_phone
+    session[:phone_number] = params[:phone][:phone_number]
+    @phone = Phone.new(
+      phone_number: session[:phone_number], 
+    )
+    render '/registrations/new_phone' unless @phone.valid?
+  end
+
+  def validates_new_address
+    session[:postal_code] = params[:address][:postal_code]
+    session[:prefectures] = params[:address][:prefectures]
+    session[:municipalities] = params[:address][:municipalities]
+    session[:house_number] = params[:address][:house_number]
+    session[:building_name] = params[:address][:building_name]
+    session[:house_phone_number] = params[:address][:house_phone_number]
+    @address = Address.new(
+      postal_code: session[:postal_code], 
+      prefectures: session[:prefectures], 
+      municipalities: session[:municipalities], 
+      house_number: session[:house_number], 
+      building_name: session[:building_name], 
+      house_phone_number: session[:house_phone_number], 
+    )
+    render '/registrations/new_address' unless @address.valid?
   end
 
   private

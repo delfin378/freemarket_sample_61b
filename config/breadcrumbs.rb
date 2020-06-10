@@ -16,6 +16,11 @@ crumb :check do
   parent :mypage
 end
 
+crumb :logout do
+  link "本人情報の登録", logout_index_path
+  parent :mypage
+end
+
 # crumb :projects do
 #   link "Projects", projects_path
 # end

@@ -25,7 +25,7 @@ Rails.application.routes.draw do
 
   resources :cards, only: [:create,:new, :show,:destroy] 
   resources :users, only: :show
-  resources :check, only: [:index]
+  resources :check, only: [:index, :show]
   resources :profile, only: [:index]
   resources :mypage, only: [:index]
   resources :confirm, only: [:index]
