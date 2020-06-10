@@ -41,7 +41,6 @@
     border-radius: 2px;
     color: #fff;
     font-size: 12px;
-    vertical-align: top;
   }
   input#user_nickname {
     width: 100%;
@@ -87,8 +86,9 @@
     margin: 8px 0 0;
     padding: 0;
     line-height: 1.5;
+    font-size: 14px;
   h3 {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
    }
   }
@@ -109,7 +109,6 @@
     border-radius: 2px;
     color: #fff;
     font-size: 12px;
-    vertical-align: top;
   }
   input#user_family_name {
     margin-right: 8px;
@@ -174,7 +173,6 @@ input#user_first_name_kana {
     border-radius: 2px;
     color: #fff;
     font-size: 12px;
-    vertical-align: top;
   }
   label {
     font-weight: 600;
